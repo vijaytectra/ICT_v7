@@ -1,0 +1,907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Strategy Tester Report</title>
+    <meta name="generator" content="strategy tester">
+    <style type="text/css">
+    <!--
+    @media screen {
+      td { font: 8pt  Tahoma,Arial; }
+      th { font: 10pt Tahoma,Arial; }
+    }
+    @media print {
+      td { font: 7pt Tahoma,Arial; }
+      th { font: 9pt Tahoma,Arial; }
+    }
+    .msdate { mso-number-format:"General Date"; }
+    .mspt   { mso-number-format:\#\,\#\#0\.00;  }
+    body {margin:1px;}
+    //-->
+    </style>
+  </head>
+<body>
+<div align="center">
+<table cellspacing="1" cellpadding="3" border="0">
+   <tr align="center">
+      <td colspan="13"><div style="font: 14pt Tahoma"><b>Strategy Tester Report</b><br></div></td>
+   </tr>
+   <tr align="center">
+      <td colspan="13"><div style="font: 10pt Tahoma"><b>ICMarketsSC-Demo (Build 6182)</b><br></div></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr>
+      <td colspan="13" align="center"><div style="font: 10pt Tahoma"><b>Settings</b></div></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Expert:</td>
+      <td nowrap colspan="10" align="left"><b>AsiaRangeRaid</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Symbol:</td>
+      <td nowrap colspan="10" align="left"><b>USTEC</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Period:</td>
+      <td nowrap colspan="10" align="left"><b>M15 (2024.01.01 - 2026.09.01)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Inputs:</td>
+      <td nowrap colspan="10" align="left"><b>=== Structure (do not change without re-testing) ====</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>SwingBars=5</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>MaxGapBars=40</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>DispRatio=0.50</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>MinRR=2.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>MaxRR=10.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>CostRiskMax=0.20</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>EntryWindowMin=360</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>MaxHoldMin=1440</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>=== Exit management (added after loss analysis) ====</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>BreakEvenAtR=1.5</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>CapTargetR=6.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>SoftExitMin=15</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>SoftExitR=-0.5</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>=== Session windows (BROKER SERVER hours) ====</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>AsiaStartHour=2</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>AsiaEndHour=9</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>PrintServerTime=true</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>=== Risk and housekeeping ====</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>RiskPercent=1.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>FixedLots=0.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>CommissionPoints=0.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>MaxSpreadPoints=0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>MagicNumber=20260906</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>AllowLongs=true</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>AllowShorts=true</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>Verbose=true</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >Company:</td>
+      <td nowrap colspan="10" align="left"><b>Raw Trading Ltd</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >Currency:</td>
+      <td nowrap colspan="10" align="left"><b>USD</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >Initial Deposit:</td>
+      <td nowrap colspan="10" align="left"><b>10 000.00</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >Leverage:</td>
+      <td nowrap colspan="10" align="left"><b>1:100</b></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr>
+      <td colspan="13" align="center"><div style="font: 10pt Tahoma"><b>Results</b></div></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">History Quality:</td>
+      <td nowrap><b>99%</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Bars:</td>
+      <td nowrap><b>62914</b></td>
+      <td nowrap colspan="3">Ticks:</td>
+      <td nowrap><b>3770891</b></td>
+      <td nowrap colspan="3">Symbols:</td>
+      <td nowrap colspan="2"><b>1</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Total Net Profit:</td>
+      <td nowrap><b>-1 115.88</b></td>
+      <td nowrap colspan="3">Balance Drawdown Absolute:</td>
+      <td nowrap><b>1 534.48</b></td>
+      <td nowrap colspan="3">Equity Drawdown Absolute:</td>
+      <td nowrap colspan="2"><b>1 571.88</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Gross Profit:</td>
+      <td nowrap><b>4 103.03</b></td>
+      <td nowrap colspan="3">Balance Drawdown Maximal:</td>
+      <td nowrap><b>1 700.56 (16.73%)</b></td>
+      <td nowrap colspan="3">Equity Drawdown Maximal:</td>
+      <td nowrap colspan="2"><b>1 976.96 (19.00%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Gross Loss:</td>
+      <td nowrap><b>-5 218.91</b></td>
+      <td nowrap colspan="3">Balance Drawdown Relative:</td>
+      <td nowrap><b>16.73% (1 700.56)</b></td>
+      <td nowrap colspan="3">Equity Drawdown Relative:</td>
+      <td nowrap colspan="2"><b>19.00% (1 976.96)</b></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Profit Factor:</td>
+      <td nowrap><b>0.79</b></td>
+      <td nowrap colspan="3">Expected Payoff:</td>
+      <td nowrap><b>-12.54</b></td>
+      <td nowrap colspan="3">Margin Level:</td>
+      <td nowrap colspan="2"><b>826.66%</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Recovery Factor:</td>
+      <td nowrap><b>-0.56</b></td>
+      <td nowrap colspan="3">Sharpe Ratio:</td>
+      <td nowrap><b>-5.00</b></td>
+      <td nowrap colspan="3">Z-Score:</td>
+      <td nowrap colspan="2"><b>1.85 (93.57%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">AHPR:</td>
+      <td nowrap><b>0.9988 (-0.12%)</b></td>
+      <td nowrap colspan="3">LR Correlation:</td>
+      <td nowrap><b>-0.94</b></td>
+      <td nowrap colspan="3">OnTester result:</td>
+      <td nowrap colspan="2"><b>0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">GHPR:</td>
+      <td nowrap><b>0.9987 (-0.13%)</b></td>
+      <td nowrap colspan="3">LR Standard Error:</td>
+      <td nowrap><b>165.74</b></td>
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="2"><b></b></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Total Trades:</td>
+      <td nowrap><b>89</b></td>
+      <td nowrap colspan="3">Short Trades (won %):</td>
+      <td nowrap><b>49 (32.65%)</b></td>
+      <td nowrap colspan="3">Long Trades (won %):</td>
+      <td nowrap colspan="2"><b>40 (35.00%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Total Deals:</td>
+      <td nowrap><b>178</b></td>
+      <td nowrap colspan="3">Profit Trades (% of total):</td>
+      <td nowrap><b>30 (33.71%)</b></td>
+      <td nowrap colspan="3">Loss Trades (% of total):</td>
+      <td nowrap colspan="2"><b>59 (66.29%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">Largest profit trade:</td>
+      <td nowrap><b>553.67</b></td>
+      <td nowrap colspan="3">Largest loss trade:</td>
+      <td nowrap colspan="2"><b>-114.63</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">Average profit trade:</td>
+      <td nowrap><b>136.77</b></td>
+      <td nowrap colspan="3">Average loss trade:</td>
+      <td nowrap colspan="2"><b>-88.46</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">Maximum consecutive wins ($):</td>
+      <td nowrap><b>3 (365.64)</b></td>
+      <td nowrap colspan="3">Maximum consecutive losses ($):</td>
+      <td nowrap colspan="2"><b>5 (-383.52)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">Maximal consecutive profit (count):</td>
+      <td nowrap><b>553.67 (1)</b></td>
+      <td nowrap colspan="3">Maximal consecutive loss (count):</td>
+      <td nowrap colspan="2"><b>-383.52 (5)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">Average consecutive wins:</td>
+      <td nowrap><b>1</b></td>
+      <td nowrap colspan="3">Average consecutive losses:</td>
+      <td nowrap colspan="2"><b>2</b></td>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="USTEC_report.png" title="Balance graph" width=820 height=200 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="USTEC_report-hst.png" width=860 height=400 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Correlation (Profits,MFE):</td>
+      <td nowrap><b>0.81</b></td>
+      <td nowrap colspan="3">Correlation (Profits,MAE):</td>
+      <td nowrap><b>0.60</b></td>
+      <td nowrap colspan="3">Correlation (MFE,MAE):</td>
+      <td nowrap colspan="2"><b>0.6111</b></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="USTEC_report-mfemae.png" width=860 height=400 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Minimal position holding time:</td>
+      <td nowrap><b>0:00:19</b></td>
+      <td nowrap colspan="3">Maximal position holding time:</td>
+      <td nowrap><b>24:00:00</b></td>
+      <td nowrap colspan="3">Average position holding time:</td>
+      <td nowrap colspan="2"><b>1:28:09</b></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="USTEC_report-holding.png" width=860 height=200 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+</table>
+<table cellspacing="1" cellpadding="3" border="0">
+   <tr>
+      <td style="width: 90px;height: 10px"></td>
+      <td style="width: 40px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 70px;"></td>
+      <td style="width: 70px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 100px;"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13" style="height: 25px"><div style="font: 10pt Tahoma"><b>Orders</b></div></th>
+   </tr>
+   <tr align="center" bgcolor="#E5F0FC">
+      <td nowrap style="height: 30px"><b>Open Time</b></td>
+      <td nowrap><b>Order</b></td>
+      <td nowrap><b>Symbol</b></td>
+      <td nowrap><b>Type</b></td>
+      <td nowrap colspan="2"><b>Volume</b></td>
+      <td nowrap><b>Price</b></td>
+      <td nowrap><b>S / L</b></td>
+      <td nowrap><b>T / P</b></td>
+      <td nowrap colspan="2"><b>Time</b></td>
+      <td nowrap><b>State</b></td>
+      <td nowrap><b>Comment</b></td>
+   </tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.08 13:45:00</td><td>2</td><td>USTEC</td><td>buy limit</td><td colspan="2">3 / 3</td><td>16254.80</td><td>16222.10</td><td>16343.30</td><td colspan="2">2024.01.08 19:45:00</td><td>expired</td><td>expired [2024.01.08 19:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.18 20:15:00</td><td>3</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.8 / 1.8</td><td>16920.40</td><td>16973.10</td><td>16709.60</td><td colspan="2">2024.01.18 21:11:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.18 21:26:40</td><td>4</td><td>USTEC</td><td>buy</td><td colspan="2">1.8 / 1.8</td><td>0.00</td><td></td><td></td><td colspan="2">2024.01.18 21:26:40</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.22 16:15:00</td><td>5</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.1 / 5.1</td><td>17430.95</td><td>17450.40</td><td>17348.20</td><td colspan="2">2024.01.22 16:32:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.22 16:35:40</td><td>6</td><td>USTEC</td><td>buy</td><td colspan="2">5.1 / 5.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.01.22 16:35:40</td><td>filled</td><td>sl 17450.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.24 22:30:00</td><td>7</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.2 / 4.2</td><td>17644.70</td><td>17667.90</td><td>17505.50</td><td colspan="2">2024.01.25 04:30:00</td><td>expired</td><td>expired [2024.01.25 04:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.25 20:30:00</td><td>8</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.1 / 2.1</td><td>17586.65</td><td>17632.10</td><td>17471.20</td><td colspan="2">2024.01.26 02:30:00</td><td>expired</td><td>expired [2024.01.26 02:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.26 12:00:00</td><td>9</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.6 / 3.6</td><td>17378.10</td><td>17351.40</td><td>17432.60</td><td colspan="2">2024.01.26 18:00:00</td><td>expired</td><td>expired [2024.01.26 18:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.29 15:45:00</td><td>10</td><td>USTEC</td><td>sell limit</td><td colspan="2">8.8 / 8.8</td><td>17452.00</td><td>17463.10</td><td>17385.40</td><td colspan="2">2024.01.29 16:36:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.29 16:37:40</td><td>11</td><td>USTEC</td><td>buy</td><td colspan="2">8.8 / 8.8</td><td>0.00</td><td></td><td></td><td colspan="2">2024.01.29 16:37:40</td><td>filled</td><td>sl 17463.10</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.31 11:15:00</td><td>12</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.8 / 7.8</td><td>17349.55</td><td>17361.90</td><td>17316.80</td><td colspan="2">2024.01.31 17:15:00</td><td>expired</td><td>expired [2024.01.31 17:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.31 21:45:00</td><td>13</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.2 / 3.2</td><td>17207.40</td><td>17177.60</td><td>17352.20</td><td colspan="2">2024.01.31 22:02:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.31 22:04:40</td><td>14</td><td>USTEC</td><td>sell</td><td colspan="2">3.2 / 3.2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.01.31 22:04:40</td><td>filled</td><td>sl 17177.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.02.05 21:45:00</td><td>15</td><td>USTEC</td><td>buy limit</td><td colspan="2">2 / 2</td><td>17512.55</td><td>17464.40</td><td>17633.20</td><td colspan="2">2024.02.06 03:45:00</td><td>expired</td><td>expired [2024.02.06 03:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.02.08 18:00:00</td><td>16</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.9 / 4.9</td><td>17729.10</td><td>17709.80</td><td>17773.80</td><td colspan="2">2024.02.09 01:00:00</td><td>expired</td><td>expired [2024.02.09 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.02.12 20:45:00</td><td>17</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.8 / 2.8</td><td>18007.85</td><td>18041.50</td><td>17935.70</td><td colspan="2">2024.02.13 02:45:00</td><td>expired</td><td>expired [2024.02.13 02:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.02.16 15:45:00</td><td>18</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.9 / 5.9</td><td>17944.55</td><td>17960.70</td><td>17847.65</td><td colspan="2">2024.02.16 21:45:00</td><td>expired</td><td>expired [2024.02.16 21:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.02.21 23:00:00</td><td>19</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.2 / 2.2</td><td>17357.10</td><td>17314.30</td><td>17523.30</td><td colspan="2">2024.02.21 23:21:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.02.21 23:28:40</td><td>20</td><td>USTEC</td><td>sell</td><td colspan="2">2.2 / 2.2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.02.21 23:28:40</td><td>filled</td><td>tp 17523.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.02.27 15:30:00</td><td>21</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.2 / 5.2</td><td>17974.40</td><td>17993.40</td><td>17882.30</td><td colspan="2">2024.02.27 15:49:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.02.27 17:18:40</td><td>22</td><td>USTEC</td><td>buy</td><td colspan="2">5.2 / 5.2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.02.27 17:18:40</td><td>filled</td><td>sl 17974.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.03.01 12:15:00</td><td>23</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.1 / 7.1</td><td>18108.30</td><td>18122.30</td><td>18024.30</td><td colspan="2">2024.03.01 17:00:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.03.01 17:05:40</td><td>24</td><td>USTEC</td><td>buy</td><td colspan="2">7.1 / 7.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.03.01 17:05:40</td><td>filled</td><td>sl 18108.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.03.14 17:00:00</td><td>25</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.9 / 5.9</td><td>18156.40</td><td>18173.10</td><td>18097.80</td><td colspan="2">2024.03.14 23:00:00</td><td>expired</td><td>expired [2024.03.14 23:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.03.15 16:30:00</td><td>26</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.1 / 3.1</td><td>18042.10</td><td>18073.80</td><td>17956.80</td><td colspan="2">2024.03.15 22:30:00</td><td>expired</td><td>expired [2024.03.15 22:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.03.21 21:45:00</td><td>27</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.2 / 3.2</td><td>18444.09</td><td>18474.77</td><td>18323.20</td><td colspan="2">2024.03.22 03:45:00</td><td>expired</td><td>expired [2024.03.22 03:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.03.22 15:00:00</td><td>28</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.4 / 6.4</td><td>18359.97</td><td>18375.47</td><td>18301.87</td><td colspan="2">2024.03.22 20:05:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.03.22 20:15:40</td><td>29</td><td>USTEC</td><td>buy</td><td colspan="2">6.4 / 6.4</td><td>0.00</td><td></td><td></td><td colspan="2">2024.03.22 20:15:40</td><td>filled</td><td>sl 18375.47</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.03.26 22:30:00</td><td>30</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.1 / 3.1</td><td>18368.94</td><td>18399.94</td><td>18298.59</td><td colspan="2">2024.03.27 04:30:00</td><td>expired</td><td>expired [2024.03.27 04:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.04.04 21:15:00</td><td>31</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.8 / 2.8</td><td>18335.41</td><td>18370.47</td><td>18190.64</td><td colspan="2">2024.04.05 03:15:00</td><td>expired</td><td>expired [2024.04.05 03:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.04.05 17:00:00</td><td>32</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.9 / 0.9</td><td>17961.11</td><td>17858.06</td><td>18370.47</td><td colspan="2">2024.04.05 23:00:00</td><td>expired</td><td>expired [2024.04.05 23:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.04.15 17:15:00</td><td>33</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.4 / 4.4</td><td>18162.13</td><td>18184.64</td><td>18027.17</td><td colspan="2">2024.04.15 23:15:00</td><td>expired</td><td>expired [2024.04.15 23:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.04.17 18:30:00</td><td>34</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.6 / 4.6</td><td>17786.88</td><td>17808.26</td><td>17683.16</td><td colspan="2">2024.04.18 01:00:00</td><td>expired</td><td>expired [2024.04.18 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.04.24 16:45:00</td><td>35</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.9 / 3.9</td><td>17553.33</td><td>17528.07</td><td>17607.85</td><td colspan="2">2024.04.24 17:45:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.04.24 18:03:40</td><td>36</td><td>USTEC</td><td>sell</td><td colspan="2">3.9 / 3.9</td><td>0.00</td><td></td><td></td><td colspan="2">2024.04.24 18:03:40</td><td>filled</td><td>sl 17528.07</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.04.24 18:45:00</td><td>37</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.8 / 0.8</td><td>17532.11</td><td>17647.30</td><td>17145.08</td><td colspan="2">2024.04.24 20:31:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.04.25 20:31:40</td><td>38</td><td>USTEC</td><td>buy</td><td colspan="2">0.8 / 0.8</td><td>0.00</td><td></td><td></td><td colspan="2">2024.04.25 20:31:40</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.08 17:45:00</td><td>39</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.7 / 2.7</td><td>18007.59</td><td>17971.79</td><td>18114.19</td><td colspan="2">2024.05.08 23:45:00</td><td>expired</td><td>expired [2024.05.08 23:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.17 15:45:00</td><td>40</td><td>USTEC</td><td>buy limit</td><td colspan="2">6.5 / 6.5</td><td>18546.52</td><td>18531.40</td><td>18580.80</td><td colspan="2">2024.05.17 16:57:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.17 17:30:20</td><td>41</td><td>USTEC</td><td>sell</td><td colspan="2">6.5 / 6.5</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.17 17:30:20</td><td>filled</td><td>tp 18580.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.22 21:30:00</td><td>42</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.3 / 2.3</td><td>18722.68</td><td>18766.30</td><td>18603.55</td><td colspan="2">2024.05.22 23:00:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.22 23:20:40</td><td>43</td><td>USTEC</td><td>buy</td><td colspan="2">2.3 / 2.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.22 23:20:40</td><td>filled</td><td>sl 18722.68</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.23 16:45:00</td><td>44</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.6 / 4.6</td><td>18930.76</td><td>18952.69</td><td>18799.15</td><td colspan="2">2024.05.23 22:45:00</td><td>expired</td><td>expired [2024.05.23 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.24 23:30:00</td><td>45</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.1 / 2.1</td><td>18810.82</td><td>18858.88</td><td>18626.30</td><td colspan="2">2024.05.27 01:00:00</td><td>expired</td><td>expired [2024.05.27 01:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.28 16:45:00</td><td>46</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.8 / 6.8</td><td>18910.66</td><td>18925.53</td><td>18830.56</td><td colspan="2">2024.05.28 22:45:00</td><td>expired</td><td>expired [2024.05.28 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.29 19:30:00</td><td>47</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.4 / 4.4</td><td>18726.51</td><td>18703.52</td><td>18864.45</td><td colspan="2">2024.05.29 23:28:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.29 23:49:40</td><td>48</td><td>USTEC</td><td>sell</td><td colspan="2">4.4 / 4.4</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.29 23:49:40</td><td>filled</td><td>sl 18703.52</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.30 12:00:00</td><td>49</td><td>USTEC</td><td>buy limit</td><td colspan="2">7.3 / 7.3</td><td>18621.86</td><td>18608.23</td><td>18681.38</td><td colspan="2">2024.05.30 17:39:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.30 17:41:40</td><td>50</td><td>USTEC</td><td>sell</td><td colspan="2">7.3 / 7.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.30 17:41:40</td><td>filled</td><td>sl 18608.23</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.31 17:30:00</td><td>51</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.7 / 2.7</td><td>18582.40</td><td>18619.23</td><td>18498.36</td><td colspan="2">2024.05.31 23:30:00</td><td>expired</td><td>expired [2024.05.31 23:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.03 10:30:00</td><td>52</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.6 / 5.6</td><td>18617.69</td><td>18635.31</td><td>18523.34</td><td colspan="2">2024.06.03 11:12:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.03 11:35:40</td><td>53</td><td>USTEC</td><td>buy</td><td colspan="2">5.6 / 5.6</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.03 11:35:40</td><td>filled</td><td>sl 18635.31</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.04 16:30:00</td><td>54</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.6 / 3.6</td><td>18558.04</td><td>18530.78</td><td>18638.43</td><td colspan="2">2024.06.04 16:34:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.04 17:06:40</td><td>55</td><td>USTEC</td><td>sell</td><td colspan="2">3.6 / 3.6</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.04 17:06:40</td><td>filled</td><td>sl 18558.04</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.12 11:30:00</td><td>56</td><td>USTEC</td><td>sell limit</td><td colspan="2">11.3 / 11.3</td><td>19247.64</td><td>19256.32</td><td>19218.72</td><td colspan="2">2024.06.12 12:21:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.12 14:11:40</td><td>57</td><td>USTEC</td><td>buy</td><td colspan="2">11.3 / 11.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.12 14:11:40</td><td>filled</td><td>sl 19256.32</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.13 12:30:00</td><td>58</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.9 / 7.9</td><td>19641.96</td><td>19654.27</td><td>19568.10</td><td colspan="2">2024.06.13 15:30:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.13 15:31:40</td><td>59</td><td>USTEC</td><td>buy</td><td colspan="2">7.9 / 7.9</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.13 15:31:40</td><td>filled</td><td>sl 19654.27</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.20 16:30:00</td><td>60</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.4 / 2.4</td><td>20058.34</td><td>20098.46</td><td>19954.86</td><td colspan="2">2024.06.20 22:30:00</td><td>expired</td><td>expired [2024.06.20 22:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.21 10:15:00</td><td>61</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.9 / 7.9</td><td>19804.02</td><td>19816.20</td><td>19763.35</td><td colspan="2">2024.06.21 16:15:00</td><td>expired</td><td>expired [2024.06.21 16:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.24 16:15:00</td><td>62</td><td>USTEC</td><td>sell limit</td><td colspan="2">9.1 / 9.1</td><td>19757.08</td><td>19767.64</td><td>19693.72</td><td colspan="2">2024.06.24 22:15:00</td><td>expired</td><td>expired [2024.06.24 22:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.02 16:45:00</td><td>63</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.2 / 3.2</td><td>19704.10</td><td>19674.60</td><td>19795.87</td><td colspan="2">2024.07.02 22:45:00</td><td>expired</td><td>expired [2024.07.02 22:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.12 17:45:00</td><td>64</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.5 / 0.5</td><td>20300.65</td><td>20130.43</td><td>20773.00</td><td colspan="2">2024.07.12 23:45:00</td><td>expired</td><td>expired [2024.07.12 23:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.15 20:45:00</td><td>65</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.2 / 1.2</td><td>20521.55</td><td>20599.30</td><td>20333.73</td><td colspan="2">2024.07.16 02:45:00</td><td>expired</td><td>expired [2024.07.16 02:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.07 11:15:00</td><td>66</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.7 / 0.7</td><td>17975.70</td><td>17854.30</td><td>18327.90</td><td colspan="2">2024.08.07 17:15:00</td><td>expired</td><td>expired [2024.08.07 17:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.07 19:45:00</td><td>67</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.7 / 0.7</td><td>18315.50</td><td>18447.10</td><td>17939.80</td><td colspan="2">2024.08.08 01:45:00</td><td>expired</td><td>expired [2024.08.08 01:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.16 13:15:00</td><td>68</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.1 / 5.1</td><td>19566.30</td><td>19584.90</td><td>19478.80</td><td colspan="2">2024.08.16 19:15:00</td><td>expired</td><td>expired [2024.08.16 19:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.20 11:45:00</td><td>69</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.7 / 3.7</td><td>19810.85</td><td>19836.70</td><td>19750.10</td><td colspan="2">2024.08.20 16:54:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.20 17:12:40</td><td>70</td><td>USTEC</td><td>buy</td><td colspan="2">3.7 / 3.7</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.20 17:12:40</td><td>filled</td><td>tp 19750.10</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.26 15:45:00</td><td>71</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.7 / 5.7</td><td>19752.45</td><td>19769.80</td><td>19648.35</td><td colspan="2">2024.08.26 21:45:00</td><td>expired</td><td>expired [2024.08.26 21:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.27 12:15:00</td><td>72</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.2 / 1.2</td><td>19551.50</td><td>19475.00</td><td>19770.90</td><td colspan="2">2024.08.27 13:05:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.27 15:20:40</td><td>73</td><td>USTEC</td><td>sell</td><td colspan="2">1.2 / 1.2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.27 15:20:40</td><td>filled</td><td>sl 19475.00</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.28 15:00:00</td><td>74</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.5 / 6.5</td><td>19591.55</td><td>19606.50</td><td>19501.85</td><td colspan="2">2024.08.28 21:00:00</td><td>expired</td><td>expired [2024.08.28 21:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.06 16:00:00</td><td>75</td><td>USTEC</td><td>buy limit</td><td colspan="2">2 / 2</td><td>18712.93</td><td>18664.30</td><td>18880.70</td><td colspan="2">2024.09.06 16:59:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.06 17:24:40</td><td>76</td><td>USTEC</td><td>sell</td><td colspan="2">2 / 2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.06 17:24:40</td><td>filled</td><td>sl 18664.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.09 17:45:00</td><td>77</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.1 / 1.1</td><td>18606.43</td><td>18689.30</td><td>18356.10</td><td colspan="2">2024.09.09 18:56:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.09 20:06:20</td><td>78</td><td>USTEC</td><td>buy</td><td colspan="2">1.1 / 1.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.09 20:06:20</td><td>filled</td><td>sl 18689.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.10 15:00:00</td><td>79</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.3 / 2.3</td><td>18595.85</td><td>18554.85</td><td>18698.13</td><td colspan="2">2024.09.10 18:59:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.10 20:10:40</td><td>80</td><td>USTEC</td><td>sell</td><td colspan="2">2.3 / 2.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.10 20:10:40</td><td>filled</td><td>tp 18698.13</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.11 17:15:00</td><td>81</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>18847.28</td><td>18902.91</td><td>18681.31</td><td colspan="2">2024.09.11 19:05:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.11 19:20:40</td><td>82</td><td>USTEC</td><td>buy</td><td colspan="2">1.7 / 1.7</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.11 19:20:40</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.24 10:00:00</td><td>83</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.1 / 4.1</td><td>19815.98</td><td>19792.39</td><td>19884.92</td><td colspan="2">2024.09.24 16:00:00</td><td>expired</td><td>expired [2024.09.24 16:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.26 17:15:00</td><td>84</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.6 / 1.6</td><td>20258.06</td><td>20319.13</td><td>20023.16</td><td colspan="2">2024.09.26 23:15:00</td><td>expired</td><td>expired [2024.09.26 23:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.27 15:15:00</td><td>85</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.3 / 3.3</td><td>20050.53</td><td>20021.34</td><td>20150.61</td><td colspan="2">2024.09.27 18:10:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.27 18:50:40</td><td>86</td><td>USTEC</td><td>sell</td><td colspan="2">3.3 / 3.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.27 18:50:40</td><td>filled</td><td>sl 20021.34</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.30 10:15:00</td><td>87</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.9 / 2.9</td><td>19971.78</td><td>19939.15</td><td>20078.43</td><td colspan="2">2024.09.30 11:18:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.30 14:38:40</td><td>88</td><td>USTEC</td><td>sell</td><td colspan="2">2.9 / 2.9</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.30 14:38:40</td><td>filled</td><td>sl 19939.15</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.30 16:45:00</td><td>89</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.6 / 3.6</td><td>19938.53</td><td>19912.28</td><td>20078.43</td><td colspan="2">2024.09.30 17:24:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.30 21:15:40</td><td>90</td><td>USTEC</td><td>sell</td><td colspan="2">3.6 / 3.6</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.30 21:15:40</td><td>filled</td><td>sl 19938.53</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.03 15:00:00</td><td>91</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.5 / 2.5</td><td>19733.88</td><td>19696.56</td><td>19853.84</td><td colspan="2">2024.10.03 15:40:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.03 16:31:20</td><td>92</td><td>USTEC</td><td>sell</td><td colspan="2">2.5 / 2.5</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.03 16:31:20</td><td>filled</td><td>sl 19696.56</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.10 15:00:00</td><td>93</td><td>USTEC</td><td>buy limit</td><td colspan="2">6.6 / 6.6</td><td>20234.16</td><td>20219.84</td><td>20291.99</td><td colspan="2">2024.10.10 15:30:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.10 15:30:59</td><td>94</td><td>USTEC</td><td>sell</td><td colspan="2">6.6 / 6.6</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.10 15:30:59</td><td>filled</td><td>sl 20219.84</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 16:45:00</td><td>95</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.7 / 3.7</td><td>20220.28</td><td>20195.34</td><td>20369.92</td><td colspan="2">2024.10.21 18:08:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 22:59:40</td><td>96</td><td>USTEC</td><td>sell</td><td colspan="2">3.7 / 3.7</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.21 22:59:40</td><td>filled</td><td>tp 20369.92</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.24 17:30:00</td><td>97</td><td>USTEC</td><td>sell limit</td><td colspan="2">2 / 2</td><td>20238.56</td><td>20286.87</td><td>20129.02</td><td colspan="2">2024.10.24 20:04:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.25 10:44:40</td><td>98</td><td>USTEC</td><td>buy</td><td colspan="2">2 / 2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.25 10:44:40</td><td>filled</td><td>sl 20286.87</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.08 12:45:00</td><td>99</td><td>USTEC</td><td>sell limit</td><td colspan="2">10.6 / 10.6</td><td>21142.65</td><td>21151.88</td><td>21114.21</td><td colspan="2">2024.11.08 18:45:00</td><td>expired</td><td>expired [2024.11.08 18:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.11 13:00:00</td><td>100</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.2 / 5.2</td><td>21211.95</td><td>21230.82</td><td>21165.85</td><td colspan="2">2024.11.11 14:24:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.11 14:39:40</td><td>101</td><td>USTEC</td><td>buy</td><td colspan="2">5.2 / 5.2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.11 14:39:40</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.11 16:45:00</td><td>102</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.3 / 4.3</td><td>21225.45</td><td>21247.82</td><td>21165.85</td><td colspan="2">2024.11.11 22:45:00</td><td>expired</td><td>expired [2024.11.11 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.22 16:45:00</td><td>103</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.5 / 2.5</td><td>20690.96</td><td>20651.90</td><td>20775.17</td><td colspan="2">2024.11.22 17:10:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.22 17:45:40</td><td>104</td><td>USTEC</td><td>sell</td><td colspan="2">2.5 / 2.5</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.22 17:45:40</td><td>filled</td><td>tp 20775.17</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.09 13:45:00</td><td>105</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.1 / 4.1</td><td>21654.32</td><td>21678.63</td><td>21599.90</td><td colspan="2">2024.12.09 19:45:00</td><td>expired</td><td>expired [2024.12.09 19:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.13 17:45:00</td><td>106</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.4 / 2.4</td><td>21848.32</td><td>21889.32</td><td>21679.62</td><td colspan="2">2024.12.13 23:45:00</td><td>expired</td><td>expired [2024.12.13 23:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.17 18:45:00</td><td>107</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.5 / 2.5</td><td>21975.02</td><td>21935.96</td><td>22117.51</td><td colspan="2">2024.12.17 21:23:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.18 01:02:40</td><td>108</td><td>USTEC</td><td>sell</td><td colspan="2">2.5 / 2.5</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.18 01:02:40</td><td>filled</td><td>sl 21935.96</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.20 17:15:00</td><td>109</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.8 / 1.8</td><td>20763.61</td><td>20710.92</td><td>21079.72</td><td colspan="2">2024.12.20 23:15:00</td><td>expired</td><td>expired [2024.12.20 23:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.31 18:15:00</td><td>110</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.5 / 2.5</td><td>21225.39</td><td>21263.82</td><td>21104.47</td><td colspan="2">2025.01.02 01:00:00</td><td>expired</td><td>expired [2025.01.02 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.08 13:45:00</td><td>111</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.8 / 6.8</td><td>21198.20</td><td>21212.63</td><td>21150.78</td><td colspan="2">2025.01.08 19:45:00</td><td>expired</td><td>expired [2025.01.08 19:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.08 21:30:00</td><td>112</td><td>USTEC</td><td>buy limit</td><td colspan="2">1 / 1</td><td>21020.98</td><td>20931.11</td><td>21201.41</td><td colspan="2">2025.01.09 03:30:00</td><td>expired</td><td>expired [2025.01.09 03:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.10 15:45:00</td><td>113</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.2 / 2.2</td><td>21100.27</td><td>21143.58</td><td>20986.09</td><td colspan="2">2025.01.10 21:45:00</td><td>expired</td><td>expired [2025.01.10 21:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.14 14:15:00</td><td>114</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.4 / 3.4</td><td>20901.62</td><td>20929.87</td><td>20783.64</td><td colspan="2">2025.01.14 15:30:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.14 15:50:40</td><td>115</td><td>USTEC</td><td>buy</td><td colspan="2">3.4 / 3.4</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.14 15:50:40</td><td>filled</td><td>sl 20901.62</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.16 18:45:00</td><td>116</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.4 / 2.4</td><td>21319.55</td><td>21359.55</td><td>21146.82</td><td colspan="2">2025.01.17 01:00:00</td><td>expired</td><td>expired [2025.01.17 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.24 14:15:00</td><td>117</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.3 / 4.3</td><td>21818.37</td><td>21795.81</td><td>21869.01</td><td colspan="2">2025.01.24 17:21:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.24 18:04:40</td><td>118</td><td>USTEC</td><td>sell</td><td colspan="2">4.3 / 4.3</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.24 18:04:40</td><td>filled</td><td>sl 21795.81</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.24 20:45:00</td><td>119</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.4 / 4.4</td><td>21847.16</td><td>21869.01</td><td>21803.33</td><td colspan="2">2025.01.27 01:00:00</td><td>expired</td><td>expired [2025.01.27 01:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.28 16:45:00</td><td>120</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.2 / 2.2</td><td>21217.69</td><td>21261.69</td><td>21058.71</td><td colspan="2">2025.01.28 17:14:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.28 17:23:40</td><td>121</td><td>USTEC</td><td>buy</td><td colspan="2">2.2 / 2.2</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.28 17:23:40</td><td>filled</td><td>sl 21261.69</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.29 16:45:00</td><td>122</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.1 / 2.1</td><td>21493.53</td><td>21539.02</td><td>21378.67</td><td colspan="2">2025.01.29 22:45:00</td><td>expired</td><td>expired [2025.01.29 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.30 13:00:00</td><td>123</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.7 / 3.7</td><td>21529.60</td><td>21555.22</td><td>21375.88</td><td colspan="2">2025.01.30 16:47:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.30 16:48:40</td><td>124</td><td>USTEC</td><td>buy</td><td colspan="2">3.7 / 3.7</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.30 16:48:40</td><td>filled</td><td>sl 21555.22</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.31 21:45:00</td><td>125</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.9 / 2.9</td><td>21780.74</td><td>21813.05</td><td>21586.88</td><td colspan="2">2025.02.03 01:01:00</td><td>expired</td><td>expired [2025.02.03 01:01]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.12 20:00:00</td><td>126</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.9 / 0.9</td><td>21516.30</td><td>21419.00</td><td>21738.60</td><td colspan="2">2025.02.13 02:00:00</td><td>expired</td><td>expired [2025.02.13 02:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.14 13:15:00</td><td>127</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.7 / 4.7</td><td>22054.50</td><td>22074.60</td><td>21984.90</td><td colspan="2">2025.02.14 17:07:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.14 17:52:40</td><td>128</td><td>USTEC</td><td>buy</td><td colspan="2">4.7 / 4.7</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.14 17:52:40</td><td>filled</td><td>sl 22054.50</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.25 15:30:00</td><td>129</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.6 / 2.6</td><td>21259.35</td><td>21222.70</td><td>21387.90</td><td colspan="2">2025.02.25 16:43:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.25 16:48:20</td><td>130</td><td>USTEC</td><td>sell</td><td colspan="2">2.6 / 2.6</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.25 16:48:20</td><td>filled</td><td>sl 21222.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.26 16:15:00</td><td>131</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.5 / 2.5</td><td>21233.70</td><td>21270.60</td><td>21139.20</td><td colspan="2">2025.02.26 16:52:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.26 17:12:40</td><td>132</td><td>USTEC</td><td>buy</td><td colspan="2">2.5 / 2.5</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.26 17:12:40</td><td>filled</td><td>sl 21270.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.26 20:30:00</td><td>133</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.4 / 1.4</td><td>21283.30</td><td>21347.70</td><td>21139.20</td><td colspan="2">2025.02.27 02:30:00</td><td>expired</td><td>expired [2025.02.27 02:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.04 21:00:00</td><td>134</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.6 / 0.6</td><td>20187.15</td><td>20032.90</td><td>20546.50</td><td colspan="2">2025.03.05 03:00:00</td><td>expired</td><td>expired [2025.03.05 03:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.05 14:00:00</td><td>135</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.2 / 2.2</td><td>20545.60</td><td>20587.50</td><td>20400.10</td><td colspan="2">2025.03.05 20:00:00</td><td>expired</td><td>expired [2025.03.05 20:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.01 17:15:00</td><td>136</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.8 / 1.8</td><td>19281.95</td><td>19331.90</td><td>19105.05</td><td colspan="2">2025.04.01 17:43:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.01 17:58:40</td><td>137</td><td>USTEC</td><td>buy</td><td colspan="2">1.8 / 1.8</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.01 17:58:40</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.08 20:30:00</td><td>138</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.1 / 1.1</td><td>18131.43</td><td>18214.15</td><td>17635.08</td><td colspan="2">2025.04.09 02:30:00</td><td>expired</td><td>expired [2025.04.09 02:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.15 15:30:00</td><td>139</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.3 / 2.3</td><td>18847.95</td><td>18888.35</td><td>18675.30</td><td colspan="2">2025.04.15 16:30:00</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.15 16:32:40</td><td>140</td><td>USTEC</td><td>buy</td><td colspan="2">2.3 / 2.3</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.15 16:32:40</td><td>filled</td><td>sl 18888.35</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.17 14:15:00</td><td>141</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.3 / 1.3</td><td>18451.93</td><td>18522.70</td><td>18217.40</td><td colspan="2">2025.04.17 15:03:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.17 17:27:40</td><td>142</td><td>USTEC</td><td>buy</td><td colspan="2">1.3 / 1.3</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.17 17:27:40</td><td>filled</td><td>tp 18217.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.24 13:45:00</td><td>143</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.3 / 2.3</td><td>18520.58</td><td>18479.65</td><td>18760.15</td><td colspan="2">2025.04.24 19:45:00</td><td>expired</td><td>expired [2025.04.24 19:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.25 20:15:00</td><td>144</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.5 / 1.5</td><td>19162.53</td><td>19102.60</td><td>19294.30</td><td colspan="2">2025.04.28 01:00:00</td><td>expired</td><td>expired [2025.04.28 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.29 21:00:00</td><td>145</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.3 / 1.3</td><td>19344.73</td><td>19273.55</td><td>19516.90</td><td colspan="2">2025.04.30 03:00:00</td><td>expired</td><td>expired [2025.04.30 03:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.30 23:00:00</td><td>146</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.5 / 0.5</td><td>19157.68</td><td>18998.05</td><td>19479.50</td><td colspan="2">2025.05.01 05:00:00</td><td>expired</td><td>expired [2025.05.01 05:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.01 23:45:00</td><td>147</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.4 / 1.4</td><td>19953.93</td><td>20021.05</td><td>19769.05</td><td colspan="2">2025.05.02 05:45:00</td><td>expired</td><td>expired [2025.05.02 05:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.05 18:00:00</td><td>148</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.1 / 4.1</td><td>19891.95</td><td>19868.70</td><td>20022.65</td><td colspan="2">2025.05.06 01:00:00</td><td>expired</td><td>expired [2025.05.06 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.08 17:00:00</td><td>149</td><td>USTEC</td><td>sell limit</td><td colspan="2">3 / 3</td><td>20149.10</td><td>20180.20</td><td>19962.50</td><td colspan="2">2025.05.08 18:40:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.08 18:41:40</td><td>150</td><td>USTEC</td><td>buy</td><td colspan="2">3 / 3</td><td>0.00</td><td></td><td></td><td colspan="2">2025.05.08 18:41:40</td><td>filled</td><td>sl 20180.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.15 11:00:00</td><td>151</td><td>USTEC</td><td>sell limit</td><td colspan="2">3 / 3</td><td>21304.98</td><td>21335.85</td><td>21232.95</td><td colspan="2">2025.05.15 17:00:00</td><td>expired</td><td>expired [2025.05.15 17:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.19 16:45:00</td><td>152</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.3 / 2.3</td><td>21072.13</td><td>21032.55</td><td>21309.58</td><td colspan="2">2025.05.19 22:45:00</td><td>expired</td><td>expired [2025.05.19 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.21 16:45:00</td><td>153</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.2 / 2.2</td><td>21202.10</td><td>21159.55</td><td>21371.10</td><td colspan="2">2025.05.21 20:24:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.21 20:26:40</td><td>154</td><td>USTEC</td><td>sell</td><td colspan="2">2.2 / 2.2</td><td>0.00</td><td></td><td></td><td colspan="2">2025.05.21 20:26:40</td><td>filled</td><td>sl 21159.55</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.22 17:00:00</td><td>155</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.6 / 1.6</td><td>21029.30</td><td>20973.60</td><td>21141.10</td><td colspan="2">2025.05.22 23:00:00</td><td>expired</td><td>expired [2025.05.22 23:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.28 13:45:00</td><td>156</td><td>USTEC</td><td>buy limit</td><td colspan="2">5.7 / 5.7</td><td>21366.95</td><td>21350.70</td><td>21428.25</td><td colspan="2">2025.05.28 19:45:00</td><td>expired</td><td>expired [2025.05.28 19:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.29 13:15:00</td><td>157</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>21754.38</td><td>21806.35</td><td>21534.25</td><td colspan="2">2025.05.29 19:15:00</td><td>expired</td><td>expired [2025.05.29 19:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.03 14:00:00</td><td>158</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.1 / 3.1</td><td>21385.80</td><td>21356.55</td><td>21502.00</td><td colspan="2">2025.06.03 20:00:00</td><td>expired</td><td>expired [2025.06.03 20:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.05 20:00:00</td><td>159</td><td>USTEC</td><td>sell limit</td><td colspan="2">2 / 2</td><td>21843.90</td><td>21889.55</td><td>21685.40</td><td colspan="2">2025.06.06 02:00:00</td><td>expired</td><td>expired [2025.06.06 02:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.17 21:00:00</td><td>160</td><td>USTEC</td><td>sell limit</td><td colspan="2">3 / 3</td><td>21865.10</td><td>21896.10</td><td>21772.10</td><td colspan="2">2025.06.18 03:00:00</td><td>expired</td><td>expired [2025.06.18 03:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.20 12:00:00</td><td>161</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.9 / 2.9</td><td>21690.50</td><td>21722.40</td><td>21618.00</td><td colspan="2">2025.06.20 14:18:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.20 14:44:40</td><td>162</td><td>USTEC</td><td>buy</td><td colspan="2">2.9 / 2.9</td><td>0.00</td><td></td><td></td><td colspan="2">2025.06.20 14:44:40</td><td>filled</td><td>sl 21722.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.26 16:15:00</td><td>163</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.8 / 4.8</td><td>22346.60</td><td>22365.60</td><td>22232.60</td><td colspan="2">2025.06.26 16:30:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.26 17:00:40</td><td>164</td><td>USTEC</td><td>buy</td><td colspan="2">4.8 / 4.8</td><td>0.00</td><td></td><td></td><td colspan="2">2025.06.26 17:00:40</td><td>filled</td><td>sl 22346.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.27 16:15:00</td><td>165</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.3 / 2.3</td><td>22530.20</td><td>22569.20</td><td>22443.50</td><td colspan="2">2025.06.27 16:55:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.27 17:00:40</td><td>166</td><td>USTEC</td><td>buy</td><td colspan="2">2.3 / 2.3</td><td>0.00</td><td></td><td></td><td colspan="2">2025.06.27 17:00:40</td><td>filled</td><td>sl 22569.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.27 21:15:00</td><td>167</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.8 / 5.8</td><td>22587.35</td><td>22602.90</td><td>22494.05</td><td colspan="2">2025.06.30 01:00:00</td><td>expired</td><td>expired [2025.06.30 01:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.30 16:45:00</td><td>168</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.1 / 5.1</td><td>22679.05</td><td>22696.80</td><td>22589.80</td><td colspan="2">2025.06.30 22:45:00</td><td>expired</td><td>expired [2025.06.30 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.02 17:30:00</td><td>169</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.1 / 2.1</td><td>22415.60</td><td>22373.70</td><td>22569.10</td><td colspan="2">2025.07.02 23:30:00</td><td>expired</td><td>expired [2025.07.02 23:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.08 17:00:00</td><td>170</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.1 / 2.1</td><td>22734.00</td><td>22775.80</td><td>22646.80</td><td colspan="2">2025.07.08 17:37:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.08 17:56:20</td><td>171</td><td>USTEC</td><td>buy</td><td colspan="2">2.1 / 2.1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.07.08 17:56:20</td><td>filled</td><td>tp 22646.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.11 09:00:00</td><td>172</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.5 / 1.5</td><td>22836.70</td><td>22898.20</td><td>22710.70</td><td colspan="2">2025.07.11 15:00:00</td><td>expired</td><td>expired [2025.07.11 15:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.15 22:00:00</td><td>173</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.5 / 1.5</td><td>22984.95</td><td>23045.50</td><td>22820.70</td><td colspan="2">2025.07.16 04:00:00</td><td>expired</td><td>expired [2025.07.16 04:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.18 11:00:00</td><td>174</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.1 / 6.1</td><td>23126.55</td><td>23141.80</td><td>23089.30</td><td colspan="2">2025.07.18 16:27:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.18 16:28:40</td><td>175</td><td>USTEC</td><td>buy</td><td colspan="2">6.1 / 6.1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.07.18 16:28:40</td><td>filled</td><td>sl 23141.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.18 17:30:00</td><td>176</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.2 / 1.2</td><td>23077.25</td><td>23150.20</td><td>22848.10</td><td colspan="2">2025.07.18 18:49:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.21 01:00:00</td><td>177</td><td>USTEC</td><td>buy</td><td colspan="2">1.2 / 1.2</td><td>0.00</td><td></td><td></td><td colspan="2">2025.07.21 01:00:00</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.21 16:00:00</td><td>178</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.1 / 7.1</td><td>23134.45</td><td>23147.50</td><td>23076.10</td><td colspan="2">2025.07.21 16:32:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.21 16:35:40</td><td>179</td><td>USTEC</td><td>buy</td><td colspan="2">7.1 / 7.1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.07.21 16:35:40</td><td>filled</td><td>sl 23147.50</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.21 23:30:00</td><td>180</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.1 / 5.1</td><td>23246.25</td><td>23264.10</td><td>23139.15</td><td colspan="2">2025.07.22 05:30:00</td><td>expired</td><td>expired [2025.07.22 05:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.23 16:45:00</td><td>181</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.6 / 6.6</td><td>23117.05</td><td>23130.90</td><td>23033.95</td><td colspan="2">2025.07.23 18:54:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.23 18:55:40</td><td>182</td><td>USTEC</td><td>buy</td><td colspan="2">6.6 / 6.6</td><td>0.00</td><td></td><td></td><td colspan="2">2025.07.23 18:55:40</td><td>filled</td><td>sl 23117.05</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.31 14:00:00</td><td>183</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.6 / 3.6</td><td>23683.60</td><td>23709.10</td><td>23576.80</td><td colspan="2">2025.07.31 20:00:00</td><td>expired</td><td>expired [2025.07.31 20:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.08.05 17:45:00</td><td>184</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.1 / 3.1</td><td>23259.80</td><td>23288.60</td><td>23199.30</td><td colspan="2">2025.08.05 23:45:00</td><td>expired</td><td>expired [2025.08.05 23:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.08.06 12:30:00</td><td>185</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.1 / 3.1</td><td>23086.60</td><td>23115.80</td><td>22971.30</td><td colspan="2">2025.08.06 16:31:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.08.06 16:35:20</td><td>186</td><td>USTEC</td><td>buy</td><td colspan="2">3.1 / 3.1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.08.06 16:35:20</td><td>filled</td><td>sl 23115.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.08.13 17:30:00</td><td>187</td><td>USTEC</td><td>sell limit</td><td colspan="2">2 / 2</td><td>23922.95</td><td>23967.70</td><td>23821.50</td><td colspan="2">2025.08.13 23:30:00</td><td>expired</td><td>expired [2025.08.13 23:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.10 11:30:00</td><td>188</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.6 / 4.6</td><td>23903.20</td><td>23922.80</td><td>23844.00</td><td colspan="2">2025.09.10 14:20:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.10 14:42:40</td><td>189</td><td>USTEC</td><td>buy</td><td colspan="2">4.6 / 4.6</td><td>0.00</td><td></td><td></td><td colspan="2">2025.09.10 14:42:40</td><td>filled</td><td>sl 23922.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.16 17:00:00</td><td>190</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.1 / 7.1</td><td>24375.30</td><td>24387.90</td><td>24299.70</td><td colspan="2">2025.09.16 23:00:00</td><td>expired</td><td>expired [2025.09.16 23:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.17 11:45:00</td><td>191</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.7 / 5.7</td><td>24286.85</td><td>24302.40</td><td>24252.90</td><td colspan="2">2025.09.17 16:30:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.17 16:34:40</td><td>192</td><td>USTEC</td><td>buy</td><td colspan="2">5.7 / 5.7</td><td>0.00</td><td></td><td></td><td colspan="2">2025.09.17 16:34:40</td><td>filled</td><td>tp 24252.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.18 16:45:00</td><td>193</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>24462.05</td><td>24515.20</td><td>24312.60</td><td colspan="2">2025.09.18 17:00:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.18 17:10:40</td><td>194</td><td>USTEC</td><td>buy</td><td colspan="2">1.7 / 1.7</td><td>0.00</td><td></td><td></td><td colspan="2">2025.09.18 17:10:40</td><td>filled</td><td>sl 24515.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.23 14:15:00</td><td>195</td><td>USTEC</td><td>sell limit</td><td colspan="2">6 / 6</td><td>24768.65</td><td>24783.70</td><td>24735.30</td><td colspan="2">2025.09.23 20:15:00</td><td>expired</td><td>expired [2025.09.23 20:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.24 16:45:00</td><td>196</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.6 / 5.6</td><td>24656.30</td><td>24672.40</td><td>24571.40</td><td colspan="2">2025.09.24 22:45:00</td><td>expired</td><td>expired [2025.09.24 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.29 16:30:00</td><td>197</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.7 / 5.7</td><td>24668.95</td><td>24684.90</td><td>24573.25</td><td colspan="2">2025.09.29 16:42:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.29 16:43:40</td><td>198</td><td>USTEC</td><td>buy</td><td colspan="2">5.7 / 5.7</td><td>0.00</td><td></td><td></td><td colspan="2">2025.09.29 16:43:40</td><td>filled</td><td>sl 24684.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.29 21:45:00</td><td>199</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.3 / 1.3</td><td>24682.45</td><td>24749.10</td><td>24530.60</td><td colspan="2">2025.09.30 03:45:00</td><td>expired</td><td>expired [2025.09.30 03:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.01 17:30:00</td><td>200</td><td>USTEC</td><td>buy limit</td><td colspan="2">2 / 2</td><td>24456.70</td><td>24412.50</td><td>24625.00</td><td colspan="2">2025.10.01 23:30:00</td><td>expired</td><td>expired [2025.10.01 23:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.03 14:00:00</td><td>201</td><td>USTEC</td><td>sell limit</td><td colspan="2">7.3 / 7.3</td><td>24973.70</td><td>24986.00</td><td>24899.90</td><td colspan="2">2025.10.03 20:00:00</td><td>expired</td><td>expired [2025.10.03 20:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.06 23:00:00</td><td>202</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.4 / 2.4</td><td>25008.45</td><td>25045.40</td><td>24846.50</td><td colspan="2">2025.10.07 05:00:00</td><td>expired</td><td>expired [2025.10.07 05:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.14 09:30:00</td><td>203</td><td>USTEC</td><td>sell limit</td><td colspan="2">1 / 1</td><td>24694.00</td><td>24781.90</td><td>24473.80</td><td colspan="2">2025.10.14 15:30:00</td><td>expired</td><td>expired [2025.10.14 15:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.14 17:30:00</td><td>204</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.5 / 0.5</td><td>24418.50</td><td>24246.10</td><td>24781.90</td><td colspan="2">2025.10.14 23:30:00</td><td>expired</td><td>expired [2025.10.14 23:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.15 19:45:00</td><td>205</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.8 / 0.8</td><td>24828.45</td><td>24939.50</td><td>24565.80</td><td colspan="2">2025.10.16 01:45:00</td><td>expired</td><td>expired [2025.10.16 01:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.17 17:15:00</td><td>206</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.8 / 0.8</td><td>24348.10</td><td>24242.40</td><td>24667.70</td><td colspan="2">2025.10.17 23:15:00</td><td>expired</td><td>expired [2025.10.17 23:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.22 09:45:00</td><td>207</td><td>USTEC</td><td>buy limit</td><td colspan="2">2.7 / 2.7</td><td>25071.15</td><td>25038.70</td><td>25170.60</td><td colspan="2">2025.10.22 12:18:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.22 14:10:20</td><td>208</td><td>USTEC</td><td>sell</td><td colspan="2">2.7 / 2.7</td><td>0.00</td><td></td><td></td><td colspan="2">2025.10.22 14:10:20</td><td>filled</td><td>sl 25071.15</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.23 14:15:00</td><td>209</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.5 / 3.5</td><td>24947.15</td><td>24972.60</td><td>24796.60</td><td colspan="2">2025.10.23 16:45:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.23 16:49:40</td><td>210</td><td>USTEC</td><td>buy</td><td colspan="2">3.5 / 3.5</td><td>0.00</td><td></td><td></td><td colspan="2">2025.10.23 16:49:40</td><td>filled</td><td>sl 24972.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.28 13:30:00</td><td>211</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.1 / 4.1</td><td>25820.65</td><td>25799.40</td><td>25866.00</td><td colspan="2">2025.10.28 19:30:00</td><td>expired</td><td>expired [2025.10.28 19:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.31 16:45:00</td><td>212</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.4 / 2.4</td><td>26099.35</td><td>26136.30</td><td>25991.20</td><td colspan="2">2025.10.31 22:45:00</td><td>expired</td><td>expired [2025.10.31 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.03 11:15:00</td><td>213</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.2 / 4.2</td><td>25904.05</td><td>25882.90</td><td>25988.50</td><td colspan="2">2025.11.03 17:15:00</td><td>expired</td><td>expired [2025.11.03 17:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.04 17:00:00</td><td>214</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.5 / 1.5</td><td>25574.30</td><td>25515.50</td><td>25927.10</td><td colspan="2">2025.11.04 19:10:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.04 19:20:20</td><td>215</td><td>USTEC</td><td>sell</td><td colspan="2">1.5 / 1.5</td><td>0.00</td><td></td><td></td><td colspan="2">2025.11.04 19:20:20</td><td>filled</td><td>sl 25515.50</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.10 18:30:00</td><td>216</td><td>USTEC</td><td>sell limit</td><td colspan="2">1 / 1</td><td>25473.20</td><td>25560.80</td><td>25163.20</td><td colspan="2">2025.11.10 19:32:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.10 20:33:40</td><td>217</td><td>USTEC</td><td>buy</td><td colspan="2">1 / 1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.11.10 20:33:40</td><td>filled</td><td>sl 25560.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.11 21:00:00</td><td>218</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.3 / 1.3</td><td>25442.50</td><td>25378.90</td><td>25656.00</td><td colspan="2">2025.11.12 03:00:00</td><td>expired</td><td>expired [2025.11.12 03:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.12 13:30:00</td><td>219</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.1 / 5.1</td><td>25708.75</td><td>25725.80</td><td>25606.45</td><td colspan="2">2025.11.12 19:30:00</td><td>expired</td><td>expired [2025.11.12 19:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.13 11:15:00</td><td>220</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.6 / 2.6</td><td>25588.25</td><td>25620.70</td><td>25437.70</td><td colspan="2">2025.11.13 17:15:00</td><td>expired</td><td>expired [2025.11.13 17:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.17 12:30:00</td><td>221</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.8 / 2.8</td><td>25243.75</td><td>25274.20</td><td>25061.05</td><td colspan="2">2025.11.17 18:30:00</td><td>expired</td><td>expired [2025.11.17 18:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.20 17:30:00</td><td>222</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.9 / 1.9</td><td>24982.75</td><td>24936.90</td><td>25123.30</td><td colspan="2">2025.11.20 18:09:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.20 18:12:40</td><td>223</td><td>USTEC</td><td>sell</td><td colspan="2">1.9 / 1.9</td><td>0.00</td><td></td><td></td><td colspan="2">2025.11.20 18:12:40</td><td>filled</td><td>sl 24936.90</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.20 18:30:00</td><td>224</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.4 / 0.4</td><td>24998.65</td><td>25214.60</td><td>24363.40</td><td colspan="2">2025.11.21 01:00:00</td><td>expired</td><td>expired [2025.11.21 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.21 15:45:00</td><td>225</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.8 / 0.8</td><td>23927.00</td><td>23829.50</td><td>24161.90</td><td colspan="2">2025.11.21 17:35:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.21 18:48:40</td><td>226</td><td>USTEC</td><td>sell</td><td colspan="2">0.8 / 0.8</td><td>0.00</td><td></td><td></td><td colspan="2">2025.11.21 18:48:40</td><td>filled</td><td>tp 24161.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.26 12:00:00</td><td>227</td><td>USTEC</td><td>sell limit</td><td colspan="2">5 / 5</td><td>25151.05</td><td>25168.70</td><td>25045.15</td><td colspan="2">2025.11.26 13:25:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.26 15:57:40</td><td>228</td><td>USTEC</td><td>buy</td><td colspan="2">5 / 5</td><td>0.00</td><td></td><td></td><td colspan="2">2025.11.26 15:57:40</td><td>filled</td><td>sl 25151.05</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.02 18:30:00</td><td>229</td><td>USTEC</td><td>sell limit</td><td colspan="2">1 / 1</td><td>25534.30</td><td>25620.00</td><td>25285.10</td><td colspan="2">2025.12.02 19:19:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.03 04:26:40</td><td>230</td><td>USTEC</td><td>buy</td><td colspan="2">1 / 1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.12.03 04:26:40</td><td>filled</td><td>sl 25620.00</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.10 12:30:00</td><td>231</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.7 / 4.7</td><td>25695.45</td><td>25713.80</td><td>25608.30</td><td colspan="2">2025.12.10 18:30:00</td><td>expired</td><td>expired [2025.12.10 18:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.16 10:30:00</td><td>232</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.3 / 1.3</td><td>24876.15</td><td>24809.80</td><td>25049.70</td><td colspan="2">2025.12.16 16:30:00</td><td>expired</td><td>expired [2025.12.16 16:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.17 17:45:00</td><td>233</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.2 / 3.2</td><td>25230.55</td><td>25257.90</td><td>25066.45</td><td colspan="2">2025.12.17 23:45:00</td><td>expired</td><td>expired [2025.12.17 23:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.23 16:45:00</td><td>234</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.1 / 3.1</td><td>25403.05</td><td>25375.40</td><td>25504.80</td><td colspan="2">2025.12.23 17:03:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.23 17:58:40</td><td>235</td><td>USTEC</td><td>sell</td><td colspan="2">3.1 / 3.1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.12.23 17:58:40</td><td>filled</td><td>tp 25504.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.26 12:45:00</td><td>236</td><td>USTEC</td><td>buy limit</td><td colspan="2">8.5 / 8.5</td><td>25632.50</td><td>25621.90</td><td>25665.20</td><td colspan="2">2025.12.26 17:01:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.26 17:02:40</td><td>237</td><td>USTEC</td><td>sell</td><td colspan="2">8.5 / 8.5</td><td>0.00</td><td></td><td></td><td colspan="2">2025.12.26 17:02:40</td><td>filled</td><td>sl 25621.90</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.31 15:30:00</td><td>238</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.9 / 3.9</td><td>25365.75</td><td>25343.10</td><td>25447.00</td><td colspan="2">2025.12.31 17:18:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.31 17:40:40</td><td>239</td><td>USTEC</td><td>sell</td><td colspan="2">3.9 / 3.9</td><td>0.00</td><td></td><td></td><td colspan="2">2025.12.31 17:40:40</td><td>filled</td><td>sl 25365.75</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.07 16:45:00</td><td>240</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.3 / 4.3</td><td>25563.45</td><td>25543.00</td><td>25651.40</td><td colspan="2">2026.01.07 22:45:00</td><td>expired</td><td>expired [2026.01.07 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.15 21:30:00</td><td>241</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.6 / 1.6</td><td>25736.90</td><td>25791.50</td><td>25409.30</td><td colspan="2">2026.01.16 03:30:00</td><td>expired</td><td>expired [2026.01.16 03:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.21 12:00:00</td><td>242</td><td>USTEC</td><td>sell limit</td><td colspan="2">6.1 / 6.1</td><td>25087.05</td><td>25101.70</td><td>24999.15</td><td colspan="2">2026.01.21 16:22:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.21 16:23:40</td><td>243</td><td>USTEC</td><td>buy</td><td colspan="2">6.1 / 6.1</td><td>0.00</td><td></td><td></td><td colspan="2">2026.01.21 16:23:40</td><td>filled</td><td>sl 25101.70</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.22 17:00:00</td><td>244</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.5 / 1.5</td><td>25541.65</td><td>25597.80</td><td>25341.50</td><td colspan="2">2026.01.22 18:28:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.23 03:17:40</td><td>245</td><td>USTEC</td><td>buy</td><td colspan="2">1.5 / 1.5</td><td>0.00</td><td></td><td></td><td colspan="2">2026.01.23 03:17:40</td><td>filled</td><td>sl 25541.65</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.23 17:30:00</td><td>246</td><td>USTEC</td><td>buy limit</td><td colspan="2">3.1 / 3.1</td><td>25433.55</td><td>25405.50</td><td>25594.80</td><td colspan="2">2026.01.23 23:30:00</td><td>expired</td><td>expired [2026.01.23 23:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.29 16:45:00</td><td>247</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>26103.95</td><td>26153.70</td><td>25959.40</td><td colspan="2">2026.01.29 22:45:00</td><td>expired</td><td>expired [2026.01.29 22:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.30 17:15:00</td><td>248</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.3 / 1.3</td><td>25595.40</td><td>25528.60</td><td>25870.20</td><td colspan="2">2026.01.30 19:05:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.30 20:16:40</td><td>249</td><td>USTEC</td><td>sell</td><td colspan="2">1.3 / 1.3</td><td>0.00</td><td></td><td></td><td colspan="2">2026.01.30 20:16:40</td><td>filled</td><td>sl 25528.60</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.03 16:45:00</td><td>250</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.1 / 3.1</td><td>25887.45</td><td>25915.50</td><td>25788.60</td><td colspan="2">2026.02.03 22:45:00</td><td>expired</td><td>expired [2026.02.03 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.04 11:30:00</td><td>251</td><td>USTEC</td><td>sell limit</td><td colspan="2">5.1 / 5.1</td><td>25391.75</td><td>25408.80</td><td>25289.45</td><td colspan="2">2026.02.04 17:30:00</td><td>expired</td><td>expired [2026.02.04 17:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.06 13:45:00</td><td>252</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.4 / 0.4</td><td>24522.45</td><td>24335.10</td><td>25068.90</td><td colspan="2">2026.02.06 19:45:00</td><td>expired</td><td>expired [2026.02.06 19:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.11 16:00:00</td><td>253</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.6 / 1.6</td><td>25116.00</td><td>25062.70</td><td>25260.30</td><td colspan="2">2026.02.11 17:12:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.11 17:13:40</td><td>254</td><td>USTEC</td><td>sell</td><td colspan="2">1.6 / 1.6</td><td>0.00</td><td></td><td></td><td colspan="2">2026.02.11 17:13:40</td><td>filled</td><td>sl 25062.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.12 17:00:00</td><td>255</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.2 / 2.2</td><td>25299.75</td><td>25338.70</td><td>25133.20</td><td colspan="2">2026.02.12 23:00:00</td><td>expired</td><td>expired [2026.02.12 23:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.17 18:15:00</td><td>256</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.7 / 0.7</td><td>24498.55</td><td>24381.00</td><td>24766.10</td><td colspan="2">2026.02.18 01:00:00</td><td>expired</td><td>expired [2026.02.18 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.20 13:15:00</td><td>257</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.3 / 2.3</td><td>24887.00</td><td>24923.80</td><td>24794.20</td><td colspan="2">2026.02.20 16:42:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.20 16:53:20</td><td>258</td><td>USTEC</td><td>buy</td><td colspan="2">2.3 / 2.3</td><td>0.00</td><td></td><td></td><td colspan="2">2026.02.20 16:53:20</td><td>filled</td><td>tp 24794.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.27 12:15:00</td><td>259</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.1 / 2.1</td><td>25015.80</td><td>25057.00</td><td>24909.10</td><td colspan="2">2026.02.27 18:15:00</td><td>expired</td><td>expired [2026.02.27 18:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.02 17:45:00</td><td>260</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.4 / 1.4</td><td>24501.70</td><td>24438.70</td><td>24861.60</td><td colspan="2">2026.03.02 23:45:00</td><td>expired</td><td>expired [2026.03.02 23:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.03 18:30:00</td><td>261</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.5 / 0.5</td><td>24478.60</td><td>24315.00</td><td>24944.80</td><td colspan="2">2026.03.04 01:00:00</td><td>expired</td><td>expired [2026.03.04 01:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.05 11:15:00</td><td>262</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.5 / 1.5</td><td>24997.65</td><td>24939.00</td><td>25181.20</td><td colspan="2">2026.03.05 15:05:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.05 16:17:40</td><td>263</td><td>USTEC</td><td>sell</td><td colspan="2">1.5 / 1.5</td><td>0.00</td><td></td><td></td><td colspan="2">2026.03.05 16:17:40</td><td>filled</td><td>sl 24939.00</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.05 17:00:00</td><td>264</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.5 / 1.5</td><td>24984.75</td><td>24928.20</td><td>25181.20</td><td colspan="2">2026.03.05 17:25:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.05 17:30:40</td><td>265</td><td>USTEC</td><td>sell</td><td colspan="2">1.5 / 1.5</td><td>0.00</td><td></td><td></td><td colspan="2">2026.03.05 17:30:40</td><td>filled</td><td>sl 24928.20</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.10 22:30:00</td><td>266</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.8 / 0.8</td><td>25088.45</td><td>25190.20</td><td>24805.80</td><td colspan="2">2026.03.11 04:30:00</td><td>expired</td><td>expired [2026.03.11 04:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.12 16:15:00</td><td>267</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.4 / 1.4</td><td>24845.95</td><td>24904.70</td><td>24673.60</td><td colspan="2">2026.03.12 22:15:00</td><td>expired</td><td>expired [2026.03.12 22:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.13 15:00:00</td><td>268</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.8 / 1.8</td><td>24427.50</td><td>24379.70</td><td>24643.20</td><td colspan="2">2026.03.13 18:36:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.13 18:46:20</td><td>269</td><td>USTEC</td><td>sell</td><td colspan="2">1.8 / 1.8</td><td>0.00</td><td></td><td></td><td colspan="2">2026.03.13 18:46:20</td><td>filled</td><td>sl 24379.70</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.17 15:15:00</td><td>270</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.8 / 1.8</td><td>24552.90</td><td>24505.00</td><td>24654.20</td><td colspan="2">2026.03.17 21:15:00</td><td>expired</td><td>expired [2026.03.17 21:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.18 15:45:00</td><td>271</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.3 / 2.3</td><td>24945.50</td><td>24982.20</td><td>24767.10</td><td colspan="2">2026.03.18 21:45:00</td><td>expired</td><td>expired [2026.03.18 21:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.23 14:15:00</td><td>272</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.3 / 1.3</td><td>23627.75</td><td>23562.30</td><td>23878.30</td><td colspan="2">2026.03.23 20:15:00</td><td>expired</td><td>expired [2026.03.23 20:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.07 23:00:00</td><td>273</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.9 / 0.9</td><td>23860.70</td><td>23771.70</td><td>24188.20</td><td colspan="2">2026.04.08 05:00:00</td><td>expired</td><td>expired [2026.04.08 05:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.04.08 16:45:00</td><td>274</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>25036.95</td><td>25086.60</td><td>24748.20</td><td colspan="2">2026.04.08 22:45:00</td><td>expired</td><td>expired [2026.04.08 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.10 19:00:00</td><td>275</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.3 / 1.3</td><td>25164.20</td><td>25227.70</td><td>25028.20</td><td colspan="2">2026.04.13 01:00:00</td><td>expired</td><td>expired [2026.04.13 01:00]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.04.16 13:45:00</td><td>276</td><td>USTEC</td><td>sell limit</td><td colspan="2">4.5 / 4.5</td><td>26306.40</td><td>26325.30</td><td>26223.40</td><td colspan="2">2026.04.16 18:09:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.16 18:10:40</td><td>277</td><td>USTEC</td><td>buy</td><td colspan="2">4.5 / 4.5</td><td>0.00</td><td></td><td></td><td colspan="2">2026.04.16 18:10:40</td><td>filled</td><td>sl 26325.30</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.04.16 19:00:00</td><td>278</td><td>USTEC</td><td>buy limit</td><td colspan="2">4.9 / 4.9</td><td>26237.60</td><td>26220.10</td><td>26304.40</td><td colspan="2">2026.04.16 21:09:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.16 21:22:40</td><td>279</td><td>USTEC</td><td>sell</td><td colspan="2">4.9 / 4.9</td><td>0.00</td><td></td><td></td><td colspan="2">2026.04.16 21:22:40</td><td>filled</td><td>sl 26237.60</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.04.21 18:00:00</td><td>280</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.3 / 2.3</td><td>26710.30</td><td>26746.70</td><td>26631.20</td><td colspan="2">2026.04.22 01:00:00</td><td>expired</td><td>expired [2026.04.22 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.23 20:30:00</td><td>281</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>26957.05</td><td>27005.10</td><td>26698.50</td><td colspan="2">2026.04.24 02:30:00</td><td>expired</td><td>expired [2026.04.24 02:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.05.18 18:30:00</td><td>282</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.3 / 1.3</td><td>29257.50</td><td>29322.10</td><td>28988.60</td><td colspan="2">2026.05.19 01:00:00</td><td>expired</td><td>expired [2026.05.19 01:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.05.27 16:45:00</td><td>283</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.9 / 0.9</td><td>30218.10</td><td>30306.50</td><td>29967.50</td><td colspan="2">2026.05.27 22:45:00</td><td>expired</td><td>expired [2026.05.27 22:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.02 10:00:00</td><td>284</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.3 / 1.3</td><td>30296.65</td><td>30231.00</td><td>30437.80</td><td colspan="2">2026.06.02 16:00:00</td><td>expired</td><td>expired [2026.06.02 16:00]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.10 16:45:00</td><td>285</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.6 / 0.6</td><td>28705.00</td><td>28575.60</td><td>29132.40</td><td colspan="2">2026.06.10 18:15:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.10 21:50:40</td><td>286</td><td>USTEC</td><td>sell</td><td colspan="2">0.6 / 0.6</td><td>0.00</td><td></td><td></td><td colspan="2">2026.06.10 21:50:40</td><td>filled</td><td>sl 28575.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.12 12:30:00</td><td>287</td><td>USTEC</td><td>buy limit</td><td colspan="2">1 / 1</td><td>29310.80</td><td>29230.20</td><td>29508.10</td><td colspan="2">2026.06.12 16:33:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.12 16:40:40</td><td>288</td><td>USTEC</td><td>sell</td><td colspan="2">1 / 1</td><td>0.00</td><td></td><td></td><td colspan="2">2026.06.12 16:40:40</td><td>filled</td><td>sl 29310.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.16 15:30:00</td><td>289</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.9 / 1.9</td><td>30609.55</td><td>30653.20</td><td>30434.80</td><td colspan="2">2026.06.16 21:30:00</td><td>expired</td><td>expired [2026.06.16 21:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.17 17:00:00</td><td>290</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.5 / 1.5</td><td>30198.00</td><td>30252.20</td><td>29977.60</td><td colspan="2">2026.06.17 17:24:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.17 17:47:40</td><td>291</td><td>USTEC</td><td>buy</td><td colspan="2">1.5 / 1.5</td><td>0.00</td><td></td><td></td><td colspan="2">2026.06.17 17:47:40</td><td>filled</td><td>tp 29977.60</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.22 17:45:00</td><td>292</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.6 / 0.6</td><td>30515.75</td><td>30651.70</td><td>30071.80</td><td colspan="2">2026.06.22 23:45:00</td><td>expired</td><td>expired [2026.06.22 23:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.23 17:15:00</td><td>293</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.3 / 0.3</td><td>29553.05</td><td>29308.60</td><td>30323.20</td><td colspan="2">2026.06.23 17:46:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.23 21:45:40</td><td>294</td><td>USTEC</td><td>sell</td><td colspan="2">0.3 / 0.3</td><td>0.00</td><td></td><td></td><td colspan="2">2026.06.23 21:45:40</td><td>filled</td><td>sl 29308.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.24 23:30:00</td><td>295</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.4 / 0.4</td><td>29158.50</td><td>28958.00</td><td>29582.80</td><td colspan="2">2026.06.25 05:30:00</td><td>expired</td><td>expired [2026.06.25 05:30]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.25 16:45:00</td><td>296</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.1 / 1.1</td><td>29878.15</td><td>29955.90</td><td>29619.40</td><td colspan="2">2026.06.25 22:45:00</td><td>expired</td><td>expired [2026.06.25 22:45]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.07.02 17:00:00</td><td>297</td><td>USTEC</td><td>buy limit</td><td colspan="2">1.7 / 1.7</td><td>29617.45</td><td>29566.20</td><td>29924.95</td><td colspan="2">2026.07.02 17:41:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.07.02 17:42:40</td><td>298</td><td>USTEC</td><td>sell</td><td colspan="2">1.7 / 1.7</td><td>0.00</td><td></td><td></td><td colspan="2">2026.07.02 17:42:40</td><td>filled</td><td>sl 29566.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.07.15 11:15:00</td><td>299</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.3 / 1.3</td><td>29797.60</td><td>29861.10</td><td>29557.80</td><td colspan="2">2026.07.15 17:15:00</td><td>expired</td><td>expired [2026.07.15 17:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.07.20 22:15:00</td><td>300</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.6 / 0.6</td><td>28884.55</td><td>29015.60</td><td>28587.20</td><td colspan="2">2026.07.21 04:15:00</td><td>expired</td><td>expired [2026.07.21 04:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.07.22 16:45:00</td><td>301</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.7 / 0.7</td><td>28910.65</td><td>28797.90</td><td>29167.20</td><td colspan="2">2026.07.22 22:45:00</td><td>expired</td><td>expired [2026.07.22 22:45]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.07.27 14:30:00</td><td>302</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.6 / 2.6</td><td>28570.85</td><td>28603.40</td><td>28375.55</td><td colspan="2">2026.07.27 20:30:00</td><td>expired</td><td>expired [2026.07.27 20:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.07.29 22:00:00</td><td>303</td><td>USTEC</td><td>buy limit</td><td colspan="2">0.4 / 0.4</td><td>27442.55</td><td>27260.70</td><td>28022.80</td><td colspan="2">2026.07.29 22:34:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.07.29 22:49:20</td><td>304</td><td>USTEC</td><td>sell</td><td colspan="2">0.4 / 0.4</td><td>0.00</td><td></td><td></td><td colspan="2">2026.07.29 22:49:20</td><td>filled</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.04 12:15:00</td><td>305</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.9 / 1.9</td><td>28967.75</td><td>29012.20</td><td>28712.40</td><td colspan="2">2026.08.04 13:03:20</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.04 13:45:40</td><td>306</td><td>USTEC</td><td>buy</td><td colspan="2">1.9 / 1.9</td><td>0.00</td><td></td><td></td><td colspan="2">2026.08.04 13:45:40</td><td>filled</td><td>sl 29012.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.07 17:15:00</td><td>307</td><td>USTEC</td><td>sell limit</td><td colspan="2">0.9 / 0.9</td><td>29660.00</td><td>29753.30</td><td>29342.90</td><td colspan="2">2026.08.07 17:28:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.10 01:00:00</td><td>308</td><td>USTEC</td><td>buy</td><td colspan="2">0.9 / 0.9</td><td>0.00</td><td></td><td></td><td colspan="2">2026.08.10 01:00:00</td><td>filled</td><td>sl 29753.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.10 14:15:00</td><td>309</td><td>USTEC</td><td>sell limit</td><td colspan="2">3.2 / 3.2</td><td>29845.50</td><td>29871.30</td><td>29690.70</td><td colspan="2">2026.08.10 20:15:00</td><td>expired</td><td>expired [2026.08.10 20:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.17 15:30:00</td><td>310</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.7 / 1.7</td><td>30195.90</td><td>30244.30</td><td>30091.00</td><td colspan="2">2026.08.17 21:30:00</td><td>expired</td><td>expired [2026.08.17 21:30]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.21 17:15:00</td><td>311</td><td>USTEC</td><td>sell limit</td><td colspan="2">2.4 / 2.4</td><td>29419.65</td><td>29453.60</td><td>29215.95</td><td colspan="2">2026.08.21 23:15:00</td><td>expired</td><td>expired [2026.08.21 23:15]</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.25 21:15:00</td><td>312</td><td>USTEC</td><td>sell limit</td><td colspan="2">1.4 / 1.4</td><td>29281.20</td><td>29340.30</td><td>28943.30</td><td colspan="2">2026.08.26 03:15:00</td><td>expired</td><td>expired [2026.08.26 03:15]</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.27 11:15:00</td><td>313</td><td>USTEC</td><td>buy limit</td><td colspan="2">2 / 2</td><td>29379.00</td><td>29337.70</td><td>29588.30</td><td colspan="2">2026.08.27 16:57:40</td><td>filled</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.27 19:45:40</td><td>314</td><td>USTEC</td><td>sell</td><td colspan="2">2 / 2</td><td>0.00</td><td></td><td></td><td colspan="2">2026.08.27 19:45:40</td><td>filled</td><td>tp 29588.30</td></tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13" style="height: 25px"><div style="font: 10pt Tahoma"><b>Deals</b></div></th>
+   </tr>
+   <tr align="center" bgcolor="#E5F0FC">
+      <td nowrap style="height: 30px"><b>Time</b></td>
+      <td nowrap><b>Deal</b></td>
+      <td nowrap><b>Symbol</b></td>
+      <td nowrap><b>Type</b></td>
+      <td nowrap><b>Direction</b></td>
+      <td nowrap><b>Volume</b></td>
+      <td nowrap><b>Price</b></td>
+      <td nowrap><b>Order</b></td>
+      <td nowrap><b>Commission</b></td>
+      <td nowrap><b>Swap</b></td>
+      <td nowrap><b>Profit</b></td>
+      <td nowrap><b>Balance</b></td>
+      <td nowrap><b>Comment</b></td>
+   </tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.01 00:00:00</td><td>1</td><td></td><td>balance</td><td></td><td></td><td></td><td></td><td>0.00</td><td>0.00</td><td>10 000.00</td><td>10 000.00</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.18 21:11:40</td><td>2</td><td>USTEC</td><td>sell</td><td>in</td><td>1.8</td><td>16920.40</td><td>3</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 000.00</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.18 21:26:40</td><td>3</td><td>USTEC</td><td>buy</td><td>out</td><td>1.8</td><td>16955.40</td><td>4</td><td>0.00</td><td>0.00</td><td>-63.00</td><td>9 937.00</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.22 16:32:40</td><td>4</td><td>USTEC</td><td>sell</td><td>in</td><td>5.1</td><td>17430.95</td><td>5</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 937.00</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.22 16:35:40</td><td>5</td><td>USTEC</td><td>buy</td><td>out</td><td>5.1</td><td>17450.40</td><td>6</td><td>0.00</td><td>0.00</td><td>-99.20</td><td>9 837.80</td><td>sl 17450.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.29 16:36:40</td><td>6</td><td>USTEC</td><td>sell</td><td>in</td><td>8.8</td><td>17452.00</td><td>10</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 837.80</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.29 16:37:40</td><td>7</td><td>USTEC</td><td>buy</td><td>out</td><td>8.8</td><td>17463.10</td><td>11</td><td>0.00</td><td>0.00</td><td>-97.68</td><td>9 740.12</td><td>sl 17463.10</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.01.31 22:02:40</td><td>8</td><td>USTEC</td><td>buy</td><td>in</td><td>3.2</td><td>17207.40</td><td>13</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 740.12</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.01.31 22:04:40</td><td>9</td><td>USTEC</td><td>sell</td><td>out</td><td>3.2</td><td>17177.60</td><td>14</td><td>0.00</td><td>0.00</td><td>-95.36</td><td>9 644.76</td><td>sl 17177.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.02.21 23:21:40</td><td>10</td><td>USTEC</td><td>buy</td><td>in</td><td>2.2</td><td>17357.10</td><td>19</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 644.76</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.02.21 23:28:40</td><td>11</td><td>USTEC</td><td>sell</td><td>out</td><td>2.2</td><td>17523.30</td><td>20</td><td>0.00</td><td>0.00</td><td>365.64</td><td>10 010.40</td><td>tp 17523.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.02.27 15:49:40</td><td>12</td><td>USTEC</td><td>sell</td><td>in</td><td>5.2</td><td>17974.40</td><td>21</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 010.40</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.02.27 17:18:40</td><td>13</td><td>USTEC</td><td>buy</td><td>out</td><td>5.2</td><td>17974.40</td><td>22</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 010.40</td><td>sl 17974.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.03.01 17:00:40</td><td>14</td><td>USTEC</td><td>sell</td><td>in</td><td>7.1</td><td>18108.30</td><td>23</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 010.40</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.03.01 17:05:40</td><td>15</td><td>USTEC</td><td>buy</td><td>out</td><td>7.1</td><td>18108.30</td><td>24</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 010.40</td><td>sl 18108.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.03.22 20:05:40</td><td>16</td><td>USTEC</td><td>sell</td><td>in</td><td>6.4</td><td>18359.97</td><td>28</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 010.40</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.03.22 20:15:40</td><td>17</td><td>USTEC</td><td>buy</td><td>out</td><td>6.4</td><td>18375.47</td><td>29</td><td>0.00</td><td>0.00</td><td>-99.20</td><td>9 911.20</td><td>sl 18375.47</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.04.24 17:45:40</td><td>18</td><td>USTEC</td><td>buy</td><td>in</td><td>3.9</td><td>17553.33</td><td>35</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 911.20</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.04.24 18:03:40</td><td>19</td><td>USTEC</td><td>sell</td><td>out</td><td>3.9</td><td>17528.07</td><td>36</td><td>0.00</td><td>0.00</td><td>-98.51</td><td>9 812.69</td><td>sl 17528.07</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.04.24 20:31:40</td><td>20</td><td>USTEC</td><td>sell</td><td>in</td><td>0.8</td><td>17532.11</td><td>37</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 812.69</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.04.25 20:31:40</td><td>21</td><td>USTEC</td><td>buy</td><td>out</td><td>0.8</td><td>17368.58</td><td>38</td><td>0.00</td><td>-0.25</td><td>130.82</td><td>9 943.26</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.17 16:57:40</td><td>22</td><td>USTEC</td><td>buy</td><td>in</td><td>6.5</td><td>18546.52</td><td>40</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 943.26</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.17 17:30:20</td><td>23</td><td>USTEC</td><td>sell</td><td>out</td><td>6.5</td><td>18580.80</td><td>41</td><td>0.00</td><td>0.00</td><td>222.82</td><td>10 166.08</td><td>tp 18580.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.22 23:00:40</td><td>24</td><td>USTEC</td><td>sell</td><td>in</td><td>2.3</td><td>18722.68</td><td>42</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 166.08</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.22 23:20:40</td><td>25</td><td>USTEC</td><td>buy</td><td>out</td><td>2.3</td><td>18722.68</td><td>43</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 166.08</td><td>sl 18722.68</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.29 23:28:40</td><td>26</td><td>USTEC</td><td>buy</td><td>in</td><td>4.4</td><td>18726.51</td><td>47</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 166.08</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.29 23:49:40</td><td>27</td><td>USTEC</td><td>sell</td><td>out</td><td>4.4</td><td>18703.52</td><td>48</td><td>0.00</td><td>0.00</td><td>-101.16</td><td>10 064.92</td><td>sl 18703.52</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.30 17:39:40</td><td>28</td><td>USTEC</td><td>buy</td><td>in</td><td>7.3</td><td>18621.86</td><td>49</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 064.92</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.30 17:41:40</td><td>29</td><td>USTEC</td><td>sell</td><td>out</td><td>7.3</td><td>18608.23</td><td>50</td><td>0.00</td><td>0.00</td><td>-99.50</td><td>9 965.42</td><td>sl 18608.23</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.03 11:12:40</td><td>30</td><td>USTEC</td><td>sell</td><td>in</td><td>5.6</td><td>18617.69</td><td>52</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 965.42</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.03 11:35:40</td><td>31</td><td>USTEC</td><td>buy</td><td>out</td><td>5.6</td><td>18635.31</td><td>53</td><td>0.00</td><td>0.00</td><td>-98.67</td><td>9 866.75</td><td>sl 18635.31</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.04 16:34:40</td><td>32</td><td>USTEC</td><td>buy</td><td>in</td><td>3.6</td><td>18558.04</td><td>54</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 866.75</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.04 17:06:40</td><td>33</td><td>USTEC</td><td>sell</td><td>out</td><td>3.6</td><td>18558.04</td><td>55</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 866.75</td><td>sl 18558.04</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.12 12:21:20</td><td>34</td><td>USTEC</td><td>sell</td><td>in</td><td>11.3</td><td>19247.64</td><td>56</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 866.75</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.12 14:11:40</td><td>35</td><td>USTEC</td><td>buy</td><td>out</td><td>11.3</td><td>19256.32</td><td>57</td><td>0.00</td><td>0.00</td><td>-98.08</td><td>9 768.67</td><td>sl 19256.32</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.13 15:30:40</td><td>36</td><td>USTEC</td><td>sell</td><td>in</td><td>7.9</td><td>19641.96</td><td>58</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 768.67</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.13 15:31:40</td><td>37</td><td>USTEC</td><td>buy</td><td>out</td><td>7.9</td><td>19654.27</td><td>59</td><td>0.00</td><td>0.00</td><td>-97.25</td><td>9 671.42</td><td>sl 19654.27</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.20 16:54:40</td><td>38</td><td>USTEC</td><td>sell</td><td>in</td><td>3.7</td><td>19810.85</td><td>69</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 671.42</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.20 17:12:40</td><td>39</td><td>USTEC</td><td>buy</td><td>out</td><td>3.7</td><td>19750.10</td><td>70</td><td>0.00</td><td>0.00</td><td>224.78</td><td>9 896.20</td><td>tp 19750.10</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.27 13:05:40</td><td>40</td><td>USTEC</td><td>buy</td><td>in</td><td>1.2</td><td>19551.50</td><td>72</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 896.20</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.27 15:20:40</td><td>41</td><td>USTEC</td><td>sell</td><td>out</td><td>1.2</td><td>19475.00</td><td>73</td><td>0.00</td><td>0.00</td><td>-91.80</td><td>9 804.40</td><td>sl 19475.00</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.06 16:59:40</td><td>42</td><td>USTEC</td><td>buy</td><td>in</td><td>2</td><td>18712.93</td><td>75</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 804.40</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.06 17:24:40</td><td>43</td><td>USTEC</td><td>sell</td><td>out</td><td>2</td><td>18664.30</td><td>76</td><td>0.00</td><td>0.00</td><td>-97.26</td><td>9 707.14</td><td>sl 18664.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.09 18:56:40</td><td>44</td><td>USTEC</td><td>sell</td><td>in</td><td>1.1</td><td>18606.43</td><td>77</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 707.14</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.09 20:06:20</td><td>45</td><td>USTEC</td><td>buy</td><td>out</td><td>1.1</td><td>18689.30</td><td>78</td><td>0.00</td><td>0.00</td><td>-91.16</td><td>9 615.98</td><td>sl 18689.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.10 18:59:40</td><td>46</td><td>USTEC</td><td>buy</td><td>in</td><td>2.3</td><td>18595.85</td><td>79</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 615.98</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.10 20:10:40</td><td>47</td><td>USTEC</td><td>sell</td><td>out</td><td>2.3</td><td>18698.13</td><td>80</td><td>0.00</td><td>0.00</td><td>235.24</td><td>9 851.22</td><td>tp 18698.13</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.11 19:05:40</td><td>48</td><td>USTEC</td><td>sell</td><td>in</td><td>1.7</td><td>18847.28</td><td>81</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 851.22</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.11 19:20:40</td><td>49</td><td>USTEC</td><td>buy</td><td>out</td><td>1.7</td><td>18888.67</td><td>82</td><td>0.00</td><td>0.00</td><td>-70.36</td><td>9 780.86</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.27 18:10:40</td><td>50</td><td>USTEC</td><td>buy</td><td>in</td><td>3.3</td><td>20050.53</td><td>85</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 780.86</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.27 18:50:40</td><td>51</td><td>USTEC</td><td>sell</td><td>out</td><td>3.3</td><td>20021.34</td><td>86</td><td>0.00</td><td>0.00</td><td>-96.33</td><td>9 684.53</td><td>sl 20021.34</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.30 11:18:40</td><td>52</td><td>USTEC</td><td>buy</td><td>in</td><td>2.9</td><td>19971.78</td><td>87</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 684.53</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.30 14:38:40</td><td>53</td><td>USTEC</td><td>sell</td><td>out</td><td>2.9</td><td>19939.15</td><td>88</td><td>0.00</td><td>0.00</td><td>-94.63</td><td>9 589.90</td><td>sl 19939.15</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.30 17:24:40</td><td>54</td><td>USTEC</td><td>buy</td><td>in</td><td>3.6</td><td>19938.53</td><td>89</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 589.90</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.30 21:15:40</td><td>55</td><td>USTEC</td><td>sell</td><td>out</td><td>3.6</td><td>19938.53</td><td>90</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 589.90</td><td>sl 19938.53</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.03 15:40:20</td><td>56</td><td>USTEC</td><td>buy</td><td>in</td><td>2.5</td><td>19733.88</td><td>91</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 589.90</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.03 16:31:20</td><td>57</td><td>USTEC</td><td>sell</td><td>out</td><td>2.5</td><td>19696.56</td><td>92</td><td>0.00</td><td>0.00</td><td>-93.30</td><td>9 496.60</td><td>sl 19696.56</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.10 15:30:40</td><td>58</td><td>USTEC</td><td>buy</td><td>in</td><td>6.6</td><td>20234.16</td><td>93</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 496.60</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.10 15:30:59</td><td>59</td><td>USTEC</td><td>sell</td><td>out</td><td>6.6</td><td>20219.84</td><td>94</td><td>0.00</td><td>0.00</td><td>-94.51</td><td>9 402.09</td><td>sl 20219.84</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 18:08:40</td><td>60</td><td>USTEC</td><td>buy</td><td>in</td><td>3.7</td><td>20220.28</td><td>95</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 402.09</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 22:59:40</td><td>61</td><td>USTEC</td><td>sell</td><td>out</td><td>3.7</td><td>20369.92</td><td>96</td><td>0.00</td><td>0.00</td><td>553.67</td><td>9 955.76</td><td>tp 20369.92</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.24 20:04:40</td><td>62</td><td>USTEC</td><td>sell</td><td>in</td><td>2</td><td>20238.56</td><td>97</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 955.76</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.25 10:44:40</td><td>63</td><td>USTEC</td><td>buy</td><td>out</td><td>2</td><td>20286.87</td><td>98</td><td>0.00</td><td>-0.62</td><td>-96.62</td><td>9 858.52</td><td>sl 20286.87</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.11 14:24:40</td><td>64</td><td>USTEC</td><td>sell</td><td>in</td><td>5.2</td><td>21211.95</td><td>100</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 858.52</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.11 14:39:40</td><td>65</td><td>USTEC</td><td>buy</td><td>out</td><td>5.2</td><td>21225.57</td><td>101</td><td>0.00</td><td>0.00</td><td>-70.82</td><td>9 787.70</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.22 17:10:40</td><td>66</td><td>USTEC</td><td>buy</td><td>in</td><td>2.5</td><td>20690.96</td><td>103</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 787.70</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.22 17:45:40</td><td>67</td><td>USTEC</td><td>sell</td><td>out</td><td>2.5</td><td>20775.17</td><td>104</td><td>0.00</td><td>0.00</td><td>210.53</td><td>9 998.23</td><td>tp 20775.17</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.17 21:23:40</td><td>68</td><td>USTEC</td><td>buy</td><td>in</td><td>2.5</td><td>21975.02</td><td>107</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 998.23</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.18 01:02:40</td><td>69</td><td>USTEC</td><td>sell</td><td>out</td><td>2.5</td><td>21935.96</td><td>108</td><td>0.00</td><td>-16.98</td><td>-97.65</td><td>9 883.60</td><td>sl 21935.96</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.14 15:30:40</td><td>70</td><td>USTEC</td><td>sell</td><td>in</td><td>3.4</td><td>20901.62</td><td>114</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 883.60</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.14 15:50:40</td><td>71</td><td>USTEC</td><td>buy</td><td>out</td><td>3.4</td><td>20901.62</td><td>115</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 883.60</td><td>sl 20901.62</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.24 17:21:20</td><td>72</td><td>USTEC</td><td>buy</td><td>in</td><td>4.3</td><td>21818.37</td><td>117</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 883.60</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.24 18:04:40</td><td>73</td><td>USTEC</td><td>sell</td><td>out</td><td>4.3</td><td>21795.81</td><td>118</td><td>0.00</td><td>0.00</td><td>-97.01</td><td>9 786.59</td><td>sl 21795.81</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.28 17:14:40</td><td>74</td><td>USTEC</td><td>sell</td><td>in</td><td>2.2</td><td>21217.69</td><td>120</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 786.59</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.28 17:23:40</td><td>75</td><td>USTEC</td><td>buy</td><td>out</td><td>2.2</td><td>21261.69</td><td>121</td><td>0.00</td><td>0.00</td><td>-96.80</td><td>9 689.79</td><td>sl 21261.69</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.30 16:47:40</td><td>76</td><td>USTEC</td><td>sell</td><td>in</td><td>3.7</td><td>21529.60</td><td>123</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 689.79</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.30 16:48:40</td><td>77</td><td>USTEC</td><td>buy</td><td>out</td><td>3.7</td><td>21555.22</td><td>124</td><td>0.00</td><td>0.00</td><td>-94.79</td><td>9 595.00</td><td>sl 21555.22</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.14 17:07:40</td><td>78</td><td>USTEC</td><td>sell</td><td>in</td><td>4.7</td><td>22054.50</td><td>127</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 595.00</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.14 17:52:40</td><td>79</td><td>USTEC</td><td>buy</td><td>out</td><td>4.7</td><td>22054.50</td><td>128</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 595.00</td><td>sl 22054.50</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.25 16:43:40</td><td>80</td><td>USTEC</td><td>buy</td><td>in</td><td>2.6</td><td>21259.35</td><td>129</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 595.00</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.25 16:48:20</td><td>81</td><td>USTEC</td><td>sell</td><td>out</td><td>2.6</td><td>21222.70</td><td>130</td><td>0.00</td><td>0.00</td><td>-95.29</td><td>9 499.71</td><td>sl 21222.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.26 16:52:40</td><td>82</td><td>USTEC</td><td>sell</td><td>in</td><td>2.5</td><td>21233.70</td><td>131</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 499.71</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.26 17:12:40</td><td>83</td><td>USTEC</td><td>buy</td><td>out</td><td>2.5</td><td>21270.60</td><td>132</td><td>0.00</td><td>0.00</td><td>-92.25</td><td>9 407.46</td><td>sl 21270.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.01 17:43:40</td><td>84</td><td>USTEC</td><td>sell</td><td>in</td><td>1.8</td><td>19281.95</td><td>136</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 407.46</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.01 17:58:40</td><td>85</td><td>USTEC</td><td>buy</td><td>out</td><td>1.8</td><td>19325.45</td><td>137</td><td>0.00</td><td>0.00</td><td>-78.30</td><td>9 329.16</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.15 16:30:00</td><td>86</td><td>USTEC</td><td>sell</td><td>in</td><td>2.3</td><td>18847.95</td><td>139</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 329.16</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.15 16:32:40</td><td>87</td><td>USTEC</td><td>buy</td><td>out</td><td>2.3</td><td>18888.35</td><td>140</td><td>0.00</td><td>0.00</td><td>-92.92</td><td>9 236.24</td><td>sl 18888.35</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.17 15:03:40</td><td>88</td><td>USTEC</td><td>sell</td><td>in</td><td>1.3</td><td>18451.93</td><td>141</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 236.24</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.17 17:27:40</td><td>89</td><td>USTEC</td><td>buy</td><td>out</td><td>1.3</td><td>18217.40</td><td>142</td><td>0.00</td><td>0.00</td><td>304.89</td><td>9 541.13</td><td>tp 18217.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.08 18:40:40</td><td>90</td><td>USTEC</td><td>sell</td><td>in</td><td>3</td><td>20149.10</td><td>149</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 541.13</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.08 18:41:40</td><td>91</td><td>USTEC</td><td>buy</td><td>out</td><td>3</td><td>20180.20</td><td>150</td><td>0.00</td><td>0.00</td><td>-93.30</td><td>9 447.83</td><td>sl 20180.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.05.21 20:24:40</td><td>92</td><td>USTEC</td><td>buy</td><td>in</td><td>2.2</td><td>21202.10</td><td>153</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 447.83</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.05.21 20:26:40</td><td>93</td><td>USTEC</td><td>sell</td><td>out</td><td>2.2</td><td>21159.55</td><td>154</td><td>0.00</td><td>0.00</td><td>-93.61</td><td>9 354.22</td><td>sl 21159.55</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.20 14:18:40</td><td>94</td><td>USTEC</td><td>sell</td><td>in</td><td>2.9</td><td>21690.50</td><td>161</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 354.22</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.20 14:44:40</td><td>95</td><td>USTEC</td><td>buy</td><td>out</td><td>2.9</td><td>21722.40</td><td>162</td><td>0.00</td><td>0.00</td><td>-92.51</td><td>9 261.71</td><td>sl 21722.40</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.26 16:30:40</td><td>96</td><td>USTEC</td><td>sell</td><td>in</td><td>4.8</td><td>22346.60</td><td>163</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 261.71</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.26 17:00:40</td><td>97</td><td>USTEC</td><td>buy</td><td>out</td><td>4.8</td><td>22346.60</td><td>164</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 261.71</td><td>sl 22346.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.06.27 16:55:40</td><td>98</td><td>USTEC</td><td>sell</td><td>in</td><td>2.3</td><td>22530.20</td><td>165</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 261.71</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.06.27 17:00:40</td><td>99</td><td>USTEC</td><td>buy</td><td>out</td><td>2.3</td><td>22569.20</td><td>166</td><td>0.00</td><td>0.00</td><td>-89.70</td><td>9 172.01</td><td>sl 22569.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.08 17:37:40</td><td>100</td><td>USTEC</td><td>sell</td><td>in</td><td>2.1</td><td>22734.00</td><td>170</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 172.01</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.08 17:56:20</td><td>101</td><td>USTEC</td><td>buy</td><td>out</td><td>2.1</td><td>22646.80</td><td>171</td><td>0.00</td><td>0.00</td><td>183.12</td><td>9 355.13</td><td>tp 22646.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.18 16:27:40</td><td>102</td><td>USTEC</td><td>sell</td><td>in</td><td>6.1</td><td>23126.55</td><td>174</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 355.13</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.18 16:28:40</td><td>103</td><td>USTEC</td><td>buy</td><td>out</td><td>6.1</td><td>23141.80</td><td>175</td><td>0.00</td><td>0.00</td><td>-93.03</td><td>9 262.10</td><td>sl 23141.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.18 18:49:40</td><td>104</td><td>USTEC</td><td>sell</td><td>in</td><td>1.2</td><td>23077.25</td><td>176</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 262.10</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.21 01:00:00</td><td>105</td><td>USTEC</td><td>buy</td><td>out</td><td>1.2</td><td>23066.10</td><td>177</td><td>0.00</td><td>-1.12</td><td>13.38</td><td>9 274.36</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.21 16:32:40</td><td>106</td><td>USTEC</td><td>sell</td><td>in</td><td>7.1</td><td>23134.45</td><td>178</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 274.36</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.21 16:35:40</td><td>107</td><td>USTEC</td><td>buy</td><td>out</td><td>7.1</td><td>23147.50</td><td>179</td><td>0.00</td><td>0.00</td><td>-92.66</td><td>9 181.70</td><td>sl 23147.50</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.07.23 18:54:40</td><td>108</td><td>USTEC</td><td>sell</td><td>in</td><td>6.6</td><td>23117.05</td><td>181</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 181.70</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.07.23 18:55:40</td><td>109</td><td>USTEC</td><td>buy</td><td>out</td><td>6.6</td><td>23117.05</td><td>182</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 181.70</td><td>sl 23117.05</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.08.06 16:31:40</td><td>110</td><td>USTEC</td><td>sell</td><td>in</td><td>3.1</td><td>23086.60</td><td>185</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 181.70</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.08.06 16:35:20</td><td>111</td><td>USTEC</td><td>buy</td><td>out</td><td>3.1</td><td>23115.80</td><td>186</td><td>0.00</td><td>0.00</td><td>-90.52</td><td>9 091.18</td><td>sl 23115.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.10 14:20:40</td><td>112</td><td>USTEC</td><td>sell</td><td>in</td><td>4.6</td><td>23903.20</td><td>188</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 091.18</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.10 14:42:40</td><td>113</td><td>USTEC</td><td>buy</td><td>out</td><td>4.6</td><td>23922.80</td><td>189</td><td>0.00</td><td>0.00</td><td>-90.16</td><td>9 001.02</td><td>sl 23922.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.17 16:30:40</td><td>114</td><td>USTEC</td><td>sell</td><td>in</td><td>5.7</td><td>24286.85</td><td>191</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 001.02</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.17 16:34:40</td><td>115</td><td>USTEC</td><td>buy</td><td>out</td><td>5.7</td><td>24252.90</td><td>192</td><td>0.00</td><td>0.00</td><td>193.52</td><td>9 194.54</td><td>tp 24252.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.18 17:00:40</td><td>116</td><td>USTEC</td><td>sell</td><td>in</td><td>1.7</td><td>24462.05</td><td>193</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 194.54</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.18 17:10:40</td><td>117</td><td>USTEC</td><td>buy</td><td>out</td><td>1.7</td><td>24515.20</td><td>194</td><td>0.00</td><td>0.00</td><td>-90.36</td><td>9 104.18</td><td>sl 24515.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.09.29 16:42:40</td><td>118</td><td>USTEC</td><td>sell</td><td>in</td><td>5.7</td><td>24668.95</td><td>197</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 104.18</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.09.29 16:43:40</td><td>119</td><td>USTEC</td><td>buy</td><td>out</td><td>5.7</td><td>24684.90</td><td>198</td><td>0.00</td><td>0.00</td><td>-90.92</td><td>9 013.26</td><td>sl 24684.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.22 12:18:20</td><td>120</td><td>USTEC</td><td>buy</td><td>in</td><td>2.7</td><td>25071.15</td><td>207</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 013.26</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.22 14:10:20</td><td>121</td><td>USTEC</td><td>sell</td><td>out</td><td>2.7</td><td>25071.15</td><td>208</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 013.26</td><td>sl 25071.15</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.10.23 16:45:40</td><td>122</td><td>USTEC</td><td>sell</td><td>in</td><td>3.5</td><td>24947.15</td><td>209</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 013.26</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.10.23 16:49:40</td><td>123</td><td>USTEC</td><td>buy</td><td>out</td><td>3.5</td><td>24972.60</td><td>210</td><td>0.00</td><td>0.00</td><td>-89.08</td><td>8 924.18</td><td>sl 24972.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.04 19:10:40</td><td>124</td><td>USTEC</td><td>buy</td><td>in</td><td>1.5</td><td>25574.30</td><td>214</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 924.18</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.04 19:20:20</td><td>125</td><td>USTEC</td><td>sell</td><td>out</td><td>1.5</td><td>25515.50</td><td>215</td><td>0.00</td><td>0.00</td><td>-88.20</td><td>8 835.98</td><td>sl 25515.50</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.10 19:32:40</td><td>126</td><td>USTEC</td><td>sell</td><td>in</td><td>1</td><td>25473.20</td><td>216</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 835.98</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.10 20:33:40</td><td>127</td><td>USTEC</td><td>buy</td><td>out</td><td>1</td><td>25560.80</td><td>217</td><td>0.00</td><td>0.00</td><td>-87.60</td><td>8 748.38</td><td>sl 25560.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.20 18:09:40</td><td>128</td><td>USTEC</td><td>buy</td><td>in</td><td>1.9</td><td>24982.75</td><td>222</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 748.38</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.20 18:12:40</td><td>129</td><td>USTEC</td><td>sell</td><td>out</td><td>1.9</td><td>24936.90</td><td>223</td><td>0.00</td><td>0.00</td><td>-87.12</td><td>8 661.26</td><td>sl 24936.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.21 17:35:40</td><td>130</td><td>USTEC</td><td>buy</td><td>in</td><td>0.8</td><td>23927.00</td><td>225</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 661.26</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.21 18:48:40</td><td>131</td><td>USTEC</td><td>sell</td><td>out</td><td>0.8</td><td>24161.90</td><td>226</td><td>0.00</td><td>0.00</td><td>187.92</td><td>8 849.18</td><td>tp 24161.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.11.26 13:25:20</td><td>132</td><td>USTEC</td><td>sell</td><td>in</td><td>5</td><td>25151.05</td><td>227</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 849.18</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.11.26 15:57:40</td><td>133</td><td>USTEC</td><td>buy</td><td>out</td><td>5</td><td>25151.05</td><td>228</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 849.18</td><td>sl 25151.05</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.02 19:19:40</td><td>134</td><td>USTEC</td><td>sell</td><td>in</td><td>1</td><td>25534.30</td><td>229</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 849.18</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.03 04:26:40</td><td>135</td><td>USTEC</td><td>buy</td><td>out</td><td>1</td><td>25620.00</td><td>230</td><td>0.00</td><td>-0.31</td><td>-85.70</td><td>8 763.17</td><td>sl 25620.00</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.23 17:03:40</td><td>136</td><td>USTEC</td><td>buy</td><td>in</td><td>3.1</td><td>25403.05</td><td>234</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 763.17</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.23 17:58:40</td><td>137</td><td>USTEC</td><td>sell</td><td>out</td><td>3.1</td><td>25504.80</td><td>235</td><td>0.00</td><td>0.00</td><td>315.43</td><td>9 078.60</td><td>tp 25504.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.26 17:01:40</td><td>138</td><td>USTEC</td><td>buy</td><td>in</td><td>8.5</td><td>25632.50</td><td>236</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 078.60</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.26 17:02:40</td><td>139</td><td>USTEC</td><td>sell</td><td>out</td><td>8.5</td><td>25621.90</td><td>237</td><td>0.00</td><td>0.00</td><td>-90.10</td><td>8 988.50</td><td>sl 25621.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.12.31 17:18:40</td><td>140</td><td>USTEC</td><td>buy</td><td>in</td><td>3.9</td><td>25365.75</td><td>238</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 988.50</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.12.31 17:40:40</td><td>141</td><td>USTEC</td><td>sell</td><td>out</td><td>3.9</td><td>25365.75</td><td>239</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 988.50</td><td>sl 25365.75</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.21 16:22:40</td><td>142</td><td>USTEC</td><td>sell</td><td>in</td><td>6.1</td><td>25087.05</td><td>242</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 988.50</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.21 16:23:40</td><td>143</td><td>USTEC</td><td>buy</td><td>out</td><td>6.1</td><td>25101.70</td><td>243</td><td>0.00</td><td>0.00</td><td>-89.37</td><td>8 899.13</td><td>sl 25101.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.22 18:28:40</td><td>144</td><td>USTEC</td><td>sell</td><td>in</td><td>1.5</td><td>25541.65</td><td>244</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 899.13</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.23 03:17:40</td><td>145</td><td>USTEC</td><td>buy</td><td>out</td><td>1.5</td><td>25541.65</td><td>245</td><td>0.00</td><td>-0.47</td><td>0.00</td><td>8 898.66</td><td>sl 25541.65</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.01.30 19:05:20</td><td>146</td><td>USTEC</td><td>buy</td><td>in</td><td>1.3</td><td>25595.40</td><td>248</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 898.66</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.01.30 20:16:40</td><td>147</td><td>USTEC</td><td>sell</td><td>out</td><td>1.3</td><td>25528.60</td><td>249</td><td>0.00</td><td>0.00</td><td>-86.84</td><td>8 811.82</td><td>sl 25528.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.11 17:12:40</td><td>148</td><td>USTEC</td><td>buy</td><td>in</td><td>1.6</td><td>25116.00</td><td>253</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 811.82</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.11 17:13:40</td><td>149</td><td>USTEC</td><td>sell</td><td>out</td><td>1.6</td><td>25062.70</td><td>254</td><td>0.00</td><td>0.00</td><td>-85.28</td><td>8 726.54</td><td>sl 25062.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.02.20 16:42:40</td><td>150</td><td>USTEC</td><td>sell</td><td>in</td><td>2.3</td><td>24887.00</td><td>257</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 726.54</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.02.20 16:53:20</td><td>151</td><td>USTEC</td><td>buy</td><td>out</td><td>2.3</td><td>24794.20</td><td>258</td><td>0.00</td><td>0.00</td><td>213.44</td><td>8 939.98</td><td>tp 24794.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.05 15:05:40</td><td>152</td><td>USTEC</td><td>buy</td><td>in</td><td>1.5</td><td>24997.65</td><td>262</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 939.98</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.05 16:17:40</td><td>153</td><td>USTEC</td><td>sell</td><td>out</td><td>1.5</td><td>24939.00</td><td>263</td><td>0.00</td><td>0.00</td><td>-87.98</td><td>8 852.00</td><td>sl 24939.00</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.05 17:25:40</td><td>154</td><td>USTEC</td><td>buy</td><td>in</td><td>1.5</td><td>24984.75</td><td>264</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 852.00</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.05 17:30:40</td><td>155</td><td>USTEC</td><td>sell</td><td>out</td><td>1.5</td><td>24928.20</td><td>265</td><td>0.00</td><td>0.00</td><td>-84.83</td><td>8 767.17</td><td>sl 24928.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.03.13 18:36:40</td><td>156</td><td>USTEC</td><td>buy</td><td>in</td><td>1.8</td><td>24427.50</td><td>268</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 767.17</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.03.13 18:46:20</td><td>157</td><td>USTEC</td><td>sell</td><td>out</td><td>1.8</td><td>24379.70</td><td>269</td><td>0.00</td><td>0.00</td><td>-86.04</td><td>8 681.13</td><td>sl 24379.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.16 18:09:40</td><td>158</td><td>USTEC</td><td>sell</td><td>in</td><td>4.5</td><td>26306.40</td><td>276</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 681.13</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.04.16 18:10:40</td><td>159</td><td>USTEC</td><td>buy</td><td>out</td><td>4.5</td><td>26325.30</td><td>277</td><td>0.00</td><td>0.00</td><td>-85.05</td><td>8 596.08</td><td>sl 26325.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.04.16 21:09:40</td><td>160</td><td>USTEC</td><td>buy</td><td>in</td><td>4.9</td><td>26237.60</td><td>278</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 596.08</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.04.16 21:22:40</td><td>161</td><td>USTEC</td><td>sell</td><td>out</td><td>4.9</td><td>26237.60</td><td>279</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 596.08</td><td>sl 26237.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.10 18:15:40</td><td>162</td><td>USTEC</td><td>buy</td><td>in</td><td>0.6</td><td>28705.00</td><td>285</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 596.08</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.10 21:50:40</td><td>163</td><td>USTEC</td><td>sell</td><td>out</td><td>0.6</td><td>28575.60</td><td>286</td><td>0.00</td><td>0.00</td><td>-77.64</td><td>8 518.44</td><td>sl 28575.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.12 16:33:40</td><td>164</td><td>USTEC</td><td>buy</td><td>in</td><td>1</td><td>29310.80</td><td>287</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 518.44</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.12 16:40:40</td><td>165</td><td>USTEC</td><td>sell</td><td>out</td><td>1</td><td>29310.80</td><td>288</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 518.44</td><td>sl 29310.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.17 17:24:40</td><td>166</td><td>USTEC</td><td>sell</td><td>in</td><td>1.5</td><td>30198.00</td><td>290</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 518.44</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.17 17:47:40</td><td>167</td><td>USTEC</td><td>buy</td><td>out</td><td>1.5</td><td>29977.60</td><td>291</td><td>0.00</td><td>0.00</td><td>330.60</td><td>8 849.04</td><td>tp 29977.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.06.23 17:46:40</td><td>168</td><td>USTEC</td><td>buy</td><td>in</td><td>0.3</td><td>29553.05</td><td>293</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 849.04</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.06.23 21:45:40</td><td>169</td><td>USTEC</td><td>sell</td><td>out</td><td>0.3</td><td>29308.60</td><td>294</td><td>0.00</td><td>0.00</td><td>-73.34</td><td>8 775.70</td><td>sl 29308.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.07.02 17:41:40</td><td>170</td><td>USTEC</td><td>buy</td><td>in</td><td>1.7</td><td>29617.45</td><td>297</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 775.70</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.07.02 17:42:40</td><td>171</td><td>USTEC</td><td>sell</td><td>out</td><td>1.7</td><td>29566.20</td><td>298</td><td>0.00</td><td>0.00</td><td>-87.13</td><td>8 688.57</td><td>sl 29566.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.07.29 22:34:20</td><td>172</td><td>USTEC</td><td>buy</td><td>in</td><td>0.4</td><td>27442.55</td><td>303</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 688.57</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.07.29 22:49:20</td><td>173</td><td>USTEC</td><td>sell</td><td>out</td><td>0.4</td><td>27308.10</td><td>304</td><td>0.00</td><td>0.00</td><td>-53.78</td><td>8 634.79</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.04 13:03:20</td><td>174</td><td>USTEC</td><td>sell</td><td>in</td><td>1.9</td><td>28967.75</td><td>305</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 634.79</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.04 13:45:40</td><td>175</td><td>USTEC</td><td>buy</td><td>out</td><td>1.9</td><td>29012.20</td><td>306</td><td>0.00</td><td>0.00</td><td>-84.46</td><td>8 550.33</td><td>sl 29012.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.07 17:28:40</td><td>176</td><td>USTEC</td><td>sell</td><td>in</td><td>0.9</td><td>29660.00</td><td>307</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 550.33</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.10 01:00:00</td><td>177</td><td>USTEC</td><td>buy</td><td>out</td><td>0.9</td><td>29753.30</td><td>308</td><td>0.00</td><td>-0.84</td><td>-83.97</td><td>8 465.52</td><td>sl 29753.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2026.08.27 16:57:40</td><td>178</td><td>USTEC</td><td>buy</td><td>in</td><td>2</td><td>29379.00</td><td>313</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 465.52</td><td>AsiaRaid</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2026.08.27 19:45:40</td><td>179</td><td>USTEC</td><td>sell</td><td>out</td><td>2</td><td>29588.30</td><td>314</td><td>0.00</td><td>0.00</td><td>418.60</td><td>8 884.12</td><td>tp 29588.30</td></tr>
+   <tr align="right">
+      <td nowrap colspan="8" style="height: 30px"></td>
+      <td nowrap><b>0.00</b></td>
+      <td nowrap><b>-20.59</b></td>
+      <td nowrap><b>-1 095.29</b></td>
+      <td nowrap><b>8 884.12</b></td>
+      <td nowrap></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+   </tr>
+</table>
+</div>
+</body>
+</html>
